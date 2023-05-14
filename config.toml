@@ -1,0 +1,120 @@
+baseurl = "https://flccodes.github.io"
+DefaultContentLanguage = "en"
+title = "Fernando L. Couto"
+# theme = "flc-theme"
+description = "An adaptation of the Beautiful Hugo theme"
+pygmentsStyle = "trac"
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+#pygmentsUseClassic = true
+#pygmentOptions = "linenos=inline"
+#disqusShortname = "XXX"
+#googleAnalytics = "XXX"
+
+[Params]
+#  homeTitle = "Beautiful Hugo Theme" # Set a different text for the header on the home page
+  subtitle = "O conhecimento enche a pessoa de orgulho, mas o amor edifica. Se alguém pensa que conhece alguma coisa, ainda não conhece como deveria. (1 Corintios 8:1-2)"
+  mainSections = ["post","posts"]
+  logo = "img/avatar-icon.jpg" # Expecting square dimensions
+  favicon = "img/favicon.ico"
+  dateFormat = "January 2, 2006"
+  commit = false
+  rss = true
+  comments = true
+  readingTime = true
+  wordCount = true
+  useHLJS = true
+  socialShare = true
+  delayDisqus = true
+  showRelatedPosts = true
+#  hideAuthor = true
+#  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
+
+#[[Params.bigimg]]
+#  src = "img/triangle.jpg"
+#  desc = "Triangle"
+#[[Params.bigimg]]
+#  src = "img/sphere.jpg"
+#  desc = "Sphere"
+#  # position: see values of CSS background-position.
+#  position = "center top"
+#[[Params.bigimg]]
+#  src = "img/hexagon.jpg"
+#  desc = "Hexagon"
+
+[Author]
+  # Set only your "username" for default hosts and full URLs otherwise (e.g., "https://MyGitLab.org/username")
+  name = "FernandoLCouto"
+  website = "https://www.flcoutos.com.br"
+  email = "fernandolcouto@gmail.com"
+  # facebook = "username"
+  github = "flccodes"
+  gitlab = "flccodes"
+  # bitbucket = "username"
+  # twitter = "username"
+  # reddit = "username"
+  linkedin = "https://www.linkedin.com/in/fernandolcouto/"
+  # xing = "username"
+  stackoverflow = "users/XXXXXXX/username"
+  # snapchat = "username"
+  # instagram = "username"
+  youtube = "user/username" # or channel/channelname
+  # soundcloud = "username"
+  # spotify = "username"
+  # bandcamp = "username"
+  # itchio = "username"
+  # vk = "username"
+  # paypal = "username"
+  # telegram = "username"
+  # 500px = "username"
+  # codepen = "username"
+  # mastodon = "url"
+  # kaggle = "username"
+  # weibo = "username"
+  # slack = "username"
+  # discord = "invite code (https://discord.gg/XXXXXXX)"
+  # strava = "userid"
+
+[[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 1
+
+[[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 3
+
+[[menu.main]]
+    identifier = "thoughs"
+    name = "Thoughs"
+    weight = 2
+
+[[menu.main]]
+    parent = "thoughs"
+    name = "Big Image Sample"
+    url = "post/2017-03-07-bigimg-sample"
+    weight = 1
+
+[[menu.main]]
+    parent = "thoughs"
+    name = "Math Sample"
+    url = "post/2017-03-05-math-sample"
+    weight = 2
+
+[[menu.main]]
+    parent = "thoughs"
+    name = "Code Sample"
+    url = "post/2016-03-08-code-sample"
+    weight = 3
+
+[[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 3
+
+[[menu.main]]
+    name = "CV"
+    url = "/cv/"
+    weight = 3
