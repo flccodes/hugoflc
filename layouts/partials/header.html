@@ -34,13 +34,13 @@
           <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
               <div class="{{ .Type }}-heading">
-                <h1>{{ with $.Scratch.Get "title" }}{{.}}{{ else }}<br/>{{ end }}</h1>
+                <h2>{{ with $.Scratch.Get "title" }}{{.}}{{ else }}<br/>{{ end }}</h2>
                   {{ if $subtitle }}
                     {{ if eq .Type "page" }}
                       <hr class="small">
                       <span class="{{ .Type }}-subheading">{{ $subtitle }}</span>
                     {{ else }}
-                      <h2 class="{{ .Type }}-subheading">{{ $subtitle }}</h2>
+                      <h3 class="{{ .Type }}-subheading">{{ $subtitle }}</h3>
                     {{ end }}
                   {{ end }}
                   {{ if eq .Type "post" }}
@@ -60,9 +60,9 @@
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="{{ .Type }}-heading">
               {{ if eq .Type "list" }}
-                <h1>{{ if .Data.Singular }}#{{ end }}{{ .Title }}</h1>
+                <h2>{{ if .Data.Singular }}#{{ end }}{{ .Title }}</h2>
               {{ else }}
-                <h1>{{ with $title }}{{.}}{{ else }}<br/>{{ end }}</h1>
+                <h2>{{ with $title }}{{.}}{{ else }}<br/>{{ end }}</h2>
               {{ end }}
               {{ if ne .Type "post" }}
                 <hr class="small">
@@ -71,7 +71,7 @@
                 {{ if eq .Type "page" }}
                   <span class="{{ .Type }}-subheading">{{ $subtitle }}</span>
                 {{ else }}
-                  <h2 class="{{ .Type }}-subheading">{{ $subtitle }}</h2>
+                  <h3 class="{{ .Type }}-subheading">{{ $subtitle }}</h3>
                 {{ end }}
               {{ end }}
               {{ if eq .Type "post" }}
