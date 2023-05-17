@@ -6,11 +6,11 @@ tags: ["conhecimento", "kiss", "vim", "math"]
 ---
 
 
-A conhecida "Metáfora do Martelo" versa sobre _saber onde usá-lo_. Essa é, de fato, uma habilidade esperada dos profissionaismais experimentados. De forma simples, ouso afirmar que ter conhecimento, _i.e._, apenas saber algo, não é suficiente. É necessário, pois, discenir sobre seu _uso_. Isto denota _ação_ e requer orientação, sentido, ou ainda direcionamento.
+A conhecida "Metáfora do Martelo" versa sobre _saber onde usá-lo_. Essa é, de fato, uma habilidade esperada dos profissionais mais experimentados. De forma simples, ouso afirmar que ter conhecimento, _i.e._, apenas saber algo, não é suficiente. É necessário, pois, discenir sobre seu _uso_. Isto denota _ação_ e requer orientação, sentido, ou ainda direcionamento.
 
-Em uma publicação no seu Blog[^1], o engenheiro Fatih Arslan[^2], argumenta que "_usar um único arquivo de configuração `init.lua` ou `vimrc` para o (Neo)Vim é melhor do que uma abordagem de layout de várias pastas/arquivos_".  
+Em uma publicação no seu Blog[^1], o engenheiro Fatih Arslan[^2], argumenta que "_usar um único arquivo de configuração `init.lua` ou `vimrc` para o (Neo)Vim é melhor do que uma abordagem de layout de várias pastas/arquivos_". E prima pelo simples. 
 
-Na discussão de fundo, o autor propõe uma comparação entre abordagens ao escrever testes em DAMP (usando _frases descritivas e significativas_) e não no modelo DRY (_não se repita_). Esse é um tema muito rico e merece um _post_ específico. Agora, não vou entrar nos detalhes dessa discussão mas me concentrar na proposta de simplicidade na configuração do editor de texto - eu uso Vim, mas você pode pensar nesse sentido em relação à ferramenta de sua preferência. Igualmente, não é minha intenção propor algum modelo, ou formato, de arquivo de configuração para editor de texto - eu vou continuar com o `vimrc`.  
+Na discussão de fundo, o autor propõe uma comparação entre abordagens ao escrever testes em DAMP (usando _frases descritivas e significativas_) e no modelo DRY (_não se repita_). Esse é um tema muito rico e merece um _post_ específico. Agora, não vou entrar nos detalhes dessa discussão mas me concentrar na proposta de simplicidade na configuração do editor de texto - eu uso Vim, mas você pode pensar nesse sentido em relação à ferramenta de sua preferência. Igualmente, não é minha intenção propor algum modelo, ou formato, de arquivo de configuração para editor de texto - eu vou continuar com o `vimrc`.  
 
 Meu propósito é, a partir dessa premissa de simplicidade, resgatar um trecho de uma conversa que mantive com um empresário onde ele me perguntou "_para você, qual seria a melhor fórmula do Excel_?". A minha resposta, por certo, foi "_aquela que resolve o meu problema_".   
 
