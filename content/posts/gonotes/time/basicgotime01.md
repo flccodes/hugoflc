@@ -7,7 +7,7 @@ author: "Fernandoi L. Couto"
 
 
 O pacote **Time** contem um poderoso ferramental que permite ao utilizador de _Go_ manipular/exibir[^1] dados sobre o _tempo._  
-Recursos disponibilizados:
+Alguns recursos do pacote:
 
 [Funções:](https://pkg.go.dev/time@go1.21.0#pkg-functions)
 1. After()
@@ -86,8 +86,10 @@ tem-se:
 ### Type time.Time 
 
 
-_time.Time_ é um objeto do tipo [struct](https://go.dev/ref/spec#Struct_types) e tem como _valor zero_ 
-**January 1, year 1, 00:00:00.000000000 UTC**. Esse valor pode ser detectado pela função **IsZero()**.
+_time.Time_ é uma estrutura de dados do tipo [struct](https://go.dev/ref/spec#Struct_types) e tem como _valor zero_ 
+**January 1, year 1, 00:00:00.000000000 UTC**. Esse valor pode ser detectado pela função **IsZero()**. 
+
+
 
 
 
