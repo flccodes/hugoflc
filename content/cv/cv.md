@@ -31,7 +31,7 @@ Profissional com mais de 30 anos de experiência oriunda de atuações contínua
         * Jurídico: elaboração e revisão de contratos/processos 
     - Criação de estrutura para coleta de dados e elaboração de relatórios __gerenciais__: DFC (Demonstração dos Fluxos de Caixa), DRE (Demonstração do Resultado do Exercício), BALANCETES e respectivos Indicadores
     - Atuação próxima a gerentes e diretores para suporte à tomada de decisão
-    - Participação em processos negociais em diferentes esferas: AcionistasCotistas, Bancos, Fornecedores, Ações no Judiciário (Cíveis, Trabalhistas), etc.
+    - Participação em processos negociais em diferentes esferas: Acionistas/Cotistas, Bancos, Fornecedores, Ações no Judiciário (Cíveis, Trabalhistas), etc.
     - Gestão de passivos
 * Operacional:
     - Aplicação de Matemática Financeira em análise de contratos e controles com robusto uso de planilhas eletrônicas (LibreOfficeCalc, Google Sheets, MS Excel)
@@ -56,8 +56,8 @@ Profissional com mais de 30 anos de experiência oriunda de atuações contínua
 * Implementação em processos financeiros introduzindo a classificação contábil para otimizar apuração gerencial e o envio de documentos para a Contabilidade
 * Adoção de controles baseados em demonstrações gerenciais que concorreram para a redução de custos operacionais e custos fixos administrativos
 
-### FORMAÇÃO / ESTUDOS
-* Cursando Pós Graduação Lato Sensu Especialização em Meio Ambiente no IFMG (Previsão para conclusão: Dez/2024)
+### Formação / Estudos / Idiomas
+* Cursando Pós Graduação Lato Sensu: Especialização em Meio Ambiente no IFMG (Previsão para conclusão: Dez/2024)
 * Graduado em Gestão Financeira
 * Outros estudos (pesquisas autônomas junto à documentação e comunidade Go): 
     - Análise de Dados usando _Go_ e Planilhas
@@ -81,7 +81,7 @@ Profissional com mais de 30 anos de experiência oriunda de atuações contínua
 * Atuação como assistente técnico em ações revisionais
 
 #### Analista de Negócios: Organizer Ltda (Mar/2007 - Jul/2008)
-* Serviços de consultoria tendo como mercado alvo: empresas em processo de reestruturação financeira para gestão de passivos
+* Serviços de consultoria tendo como mercado alvo empresas em processo de reestruturação financeira para gestão de passivos
 * Apoio a escritórios de advocacia objetivando promover o reequilíbrio em contratos mediante a identificação e expurgo de cobranças em excesso
 
 #### Sócio-Gerente: LINK Factoring Ltda (Jun/1996 - Fev/2007)
@@ -96,11 +96,11 @@ Profissional com mais de 30 anos de experiência oriunda de atuações contínua
 * Assistente de Contas a Receber / Pagar e Tesouraria: Grupo Belauto Período 1986 - 1989
 
 
-### OUTROS INTERESSES
+### Outros Interesses
 
 * Trabalhei como voluntário divulgando as Boas Novas do Reino de Deus (Evangelho de Jesus Cristo) e no Projeto Rede de Vizinhos Protegidos da PMMG
 * Cultivo plantas, crio algumas minhocas e produzo o chá que consumo em casa com minha família
 * Gosto de me alongar, caminhar e fazer flexões - _nesta ordem_
 
 
-Baixe a **versão em PDF** deste CV no meu Google Drive: [https://drive.google.com/file/d/1ot5EQmGdV9pG28fSBt0SysE9Yu81Gm58/view?usp=sharing](https://drive.google.com/file/d/1ot5EQmGdV9pG28fSBt0SysE9Yu81Gm58/view?usp=sharing)
+Baixe a **versão em PDF** deste CV no meu Google Drive: [https://drive.google.com/file/d/1dNx3_oL8bVNCrLqrn0kn2L4XP5zzAmK5/view?usp=sharing](https://drive.google.com/file/d/1dNx3_oL8bVNCrLqrn0kn2L4XP5zzAmK5/view?usp=sharing)
