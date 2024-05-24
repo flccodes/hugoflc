@@ -25,7 +25,7 @@ Profissional com mais de 30 anos de experiência oriunda de atuações contínua
 
 * Estratégico:
     - Capacidade de moldar minha visão às políticas empresariais e planejar metas e diretrizes em sintonia com o segmento/mercado/porte do cliente/contratante
-    - Atuar em equipes multidisplinares fazendo a interface entre o Financeiro e:
+    - Atuar em equipes multidisciplinares fazendo a interface entre o Financeiro e:
         * Produção: para a otimização de processos e custos
         * Comercial: no estabelecimento de políticas de preços, concorrências, etc.
         * Jurídico: elaboração e revisão de contratos/processos 
