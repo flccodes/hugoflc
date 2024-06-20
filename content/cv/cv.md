@@ -12,65 +12,48 @@ tags: ["cv"]
 * **Email**: [fernandolcouto@gmail.com](mailto:fernandolcouto@gmail.com)
 * **Telefone**: (31) 9.8633-1811
 * **LinkedIn**: [https://www.linkedin.com/in/fernandolcouto/](https://www.linkedin.com/in/fernandolcouto/)
-* Atualizado em Maio/2024
+* Atualizado em Junho/2024
 
 
 ### Objetivo / Interesse
 
-* De forma presencial ou remota, desejo atuar como um _resolvedor de questões_, fazendo uso das experiências e do ferramental com o qual tenho familiaridade nas áreas Administrativa, Financeira, Relacionamento com Clientes, Suporte a Gerências, Jurídico, Diretoria e Clientes.
+* Atuar nas áreas Administrativa / Financeira, dando suporte ao Jurídico, Gerências e Diretoria. Disponibilidade para: Presencial / Híbrido / Remoto.
 
-### Habilidades / Recursos Profissionais
+### Algumas habilidades / Recursos Profissionais
 
-Profissional com mais de 30 anos de experiência oriunda de atuações contínuas em Controladorias, ou junto a estas, que me ensinaram a ter flexibilidade, ser adaptável e capaz de aliar técnica, disposição e visão holística. Algumas habilidades e recursos em diferentes níveis:
+Profissional com ampla experiência em Controladorias, onde desenvolvi flexibilidade, adaptabilidade e visão holística, desempenhando papeis relacionados a:  
 
-* Estratégico:
-    - Capacidade de moldar minha visão às políticas empresariais e planejar metas e diretrizes em sintonia com o segmento/mercado/porte do cliente/contratante
-    - Atuar em equipes multidisciplinares fazendo a interface entre o Financeiro e:
-        * Produção: para a otimização de processos e custos
-        * Comercial: no estabelecimento de políticas de preços, concorrências, etc.
-        * Jurídico: elaboração e revisão de contratos/processos 
-    - Criação de estrutura para coleta de dados e elaboração de relatórios __gerenciais__: DFC (Demonstração dos Fluxos de Caixa), DRE (Demonstração do Resultado do Exercício), BALANCETES e respectivos Indicadores
-    - Atuação próxima a gerentes e diretores para suporte à tomada de decisão
-    - Participação em processos negociais em diferentes esferas: Acionistas/Cotistas, Bancos, Fornecedores, Ações no Judiciário (Cíveis, Trabalhistas), etc.
-    - Gestão de passivos
-* Operacional:
-    - Aplicação de Matemática Financeira em análise de contratos e controles com robusto uso de planilhas eletrônicas (LibreOfficeCalc, Google Sheets, MS Excel)
-    - Conciliação de contas (Bancos, Caixa, Clientes, Fornecedores, etc.)
-    - Classificação de lançamentos contábeis
-    - Conexão entre Tesouraria, Contas a Pagar e Contas a Receber com a Contabilidade
+
+  - Capacidade de alinhamento às políticas empresariais em sintonia com o segmento/mercado/porte do cliente/contratante
+  - Atuar em equipes multidisciplinares fazendo a interface entre o Financeiro e:
+       * Produção: para a otimização de processos e custos
+       * Comercial: no estabelecimento de políticas de preços, concorrências, etc.
+       * Jurídico: elaboração e revisão de contratos/processos 
+  - Criação de estrutura para coleta de dados e elaboração de relatórios __gerenciais__: DFC (Demonstração dos Fluxos de Caixa), DRE (Demonstração do Resultado do Exercício), BALANCETES e respectivos Indicadores
+  - Atuação próxima a gerentes e diretores para suporte à tomada de decisão
+  - Participação em processos negociais em diferentes esferas: Acionistas/Cotistas, Bancos, Fornecedores, Ações no Judiciário (Cíveis, Trabalhistas), etc.
+  - Gestão de passivos
+  - Aplicação de Matemática Financeira em análise de contratos e controles com robusto uso de planilhas eletrônicas (LibreOfficeCalc, Google Sheets, MS Excel)
+  - Conciliação de contas (Bancos, Caixa, Clientes, Fornecedores, etc.)
+  - Classificação de lançamentos contábeis
+  - Conexão entre Tesouraria, Contas a Pagar e Contas a Receber com a Contabilidade
+
+### Outras habilidades / Recursos Profissionais
+
 * Familiaridade com:
-    - Estatística usando Python (Numpy, Pandas, Matplotlib), R (RStudio)
-    - Linux, Vim, Bash, Git, Containers, Virtualization, HTML, CSS, Markdown, JavaScript (Google Apps Script), SQL e Go (Golang)
-    - Noções Básicas de Rede
+  - Estatística usando Python (Numpy, Pandas, Matplotlib), R (RStudio)
+  - Linux, Vim, Bash, Git, Containers, Virtualization, HTML, CSS, Markdown, JavaScript (Google Apps Script), SQL e Go (Golang)
+  - Noções Básicas de Rede
 * Atuo como um flexível resolvedor de questões conciliando regras de negócios e demandas técnicas adaptando ferramentas para construir soluções
 * Experiência home office/híbrido desde 2008
 * Opção de contratação por PJ
-* Inscrito no CRA-MG sob o número 06-03749/D
-
-
-### Descrição de alguns Resultados
-* Identificação de valores cobrados em excesso promovendo reduções significativas:
-    - 95% em Execução Fiscal (Federal)
-    - 90%, 80% e 65% em ações envolvendo contratos bancários
-    - 45%, 42%, 35% envolvendo cobranças de fornecedores
-    - 70%, 50%, 35% em ações trabalhistas
-* Implementação em processos financeiros introduzindo a classificação contábil para otimizar apuração gerencial e o envio de documentos para a Contabilidade
-* Adoção de controles baseados em demonstrações gerenciais que concorreram para a redução de custos e criação de indicadores como forma de aferição de resultados
 
 ### Formação / Estudos
 * Graduado em Gestão Financeira
 * Pesquisas autônomas junto à documentação e comunidade Go: 
-    - Análise de Dados usando _Go_ e Planilhas
+  - Análise de Dados usando _Go_ e Planilhas
 * Português Brasileiro: nativo
 * Inglês: leitura
-* Outros Cursos:
-    - Escola Nacional de Administração Pública (ENAP)
-        * Análise de dados como suporte à tomada de decisão: 30h
-        * Análise de Dados em Linguagem R: 20h
-        * Matemática Financeira: 20h
-        * Monitoramento da Biodiversidade: gestão, análise e síntese dos dados: 49h
-        * Estatística para Análise de Dados na Adm. Pública: 25h
-        * Estatística: 20h
 * Metas permanentes: Aprendizagem contínua e gerar valor para a Sociedade
 
 ### Histórico das Experiências
@@ -84,7 +67,7 @@ Profissional com mais de 30 anos de experiência oriunda de atuações contínua
 * Serviços de consultoria tendo como mercado alvo empresas em processo de reestruturação financeira para gestão de passivos
 * Apoio a escritórios de advocacia objetivando promover o reequilíbrio em contratos mediante a identificação e expurgo de cobranças em excesso
 
-#### Sócio-Gerente: LINK Factoring Ltda (Jun/1996 - Fev/2007)
+#### Gerente: LINK Factoring Ltda (Jun/1996 - Fev/2007)
 * Gerenciamento de uma sociedade limitada no ramo de fomento mercantil, realizando serviços de assessoria e gestão de crédito, seleção e riscos, administração de contas a pagar e a receber, compras de direitos creditórios resultantes de vendas mercantis a prazo ou de prestação de serviços
 * Responsável pela análise e prospecção de novos negócios, abarcando análise cadastral e da viabilidade da operação do fomentado
 * Gestão de todas as operações de crédito e respectiva carteira de recebíveis: Cobrança e Recuperação de Ativos
@@ -95,11 +78,4 @@ Profissional com mais de 30 anos de experiência oriunda de atuações contínua
 * Supervisor de Contas a Pagar / Assistente do Diretor Financeiro: Grupo Itaminas/Santa Mariana Construtora S.A. 1989 - 1994
 * Assistente de Contas a Receber / Pagar e Tesouraria: Grupo Belauto Período 1986 - 1989
 
-
-### Outros Interesses
-
-* Trabalhei como voluntário divulgando as Boas Novas do Reino de Deus (Evangelho de Jesus Cristo) e no Projeto Rede de Vizinhos Protegidos da PMMG
-* Cultivo plantas, crio algumas minhocas e produzo o chá que consumo em casa com minha família
-* Gosto de me alongar, caminhar e fazer flexões - _nesta ordem_
-
-
+### [Faça o download deste CV em formato PDF](https://drive.google.com/file/d/1b28pULdMtbm45dO6zFJeq-xsT8IGKPR4/view?usp=sharing)
