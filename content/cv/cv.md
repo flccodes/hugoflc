@@ -7,27 +7,29 @@ tags: ["cv"]
 
 ### Informações Pessoais
 
-* Brasileiro, casado, 58 anos (Nov./1966)
-* Residente na região Oeste de Belo Horizonte/MG
+* Brasileiro, casado, residente em Belo Horizonte/MG (CEP 30.555-150)
 * **Email**: [fernandolcouto@gmail.com](mailto:fernandolcouto@gmail.com) / **WhatsApp**: (31) 9.8484-1811
  
 
 ### Objetivo / Interesse
 
-* Atuar nas áreas Administrativa / Financeira / Comercial. Disponibilidade para: Presencial / Híbrido / Remoto.
+* Atuar nas áreas Administrativa / Financeira / Comercial. 
+* Disponibilidade para: Presencial / Híbrido / Remoto.
 
 ### Algumas habilidades / Recursos Profissionais
 
-Profissional com ampla experiência em Controladorias, onde desenvolvi flexibilidade e adaptabilidade, desempenhando papeis relacionados a:  
+Profissional com ampla vivência e experiência em Controladorias, onde desenvolvi flexibilidade e adaptabilidade, desempenhando papéis relacionados a:  
 
 
-* Atuação em equipes multidisciplinares fazendo a interface entre o Financeiro / Produção / Comercial / Jurídico, conectando Tesouraria, Contas a Pagar / Receber à Contabilidade, usando:
+* Atuação em equipes multidisciplinares fazendo a interface entre o Financeiro / Produção / Comercial / Jurídico, conectando Tesouraria, Contas a Pagar / Receber à Contabilidade, realizando e/ou coordenando equipes, usando:
 
   - Classificação de lançamentos contábeis
   - Conciliação de contas (Bancos, Caixa, Clientes, Fornecedores, etc.)
+  - Faturamento / Cobrança; Controle de Ordem de Compra / Pagamentos
   - Apuração de impostos
   - Análise e revisão de contratos
 
+* Elaboração e análise de demonstrações financeiras _gerenciais_ (BP, DRE, DFC)
 * Aplicação de Matemática Financeira com robusto uso de planilhas eletrônicas (LibreOfficeCalc, Google Sheets, MS Excel)
 
 
@@ -72,4 +74,4 @@ Profissional com ampla experiência em Controladorias, onde desenvolvi flexibili
 * Assistente de Contas a Receber / Pagar e Tesouraria: Grupo Belauto Período 1986 - 1989
 
 
-#### [Faça o download deste CV em formato PDF](https://drive.google.com/file/d/12qhh9F74mIvABS9DZrOE0DEZbukZmD9-/view?usp=sharing) . Atualizado em Agosto/2024
+#### [Faça o download deste CV em formato PDF](https://drive.google.com/file/d/1EctpxJfgMtC9Hlvh7dwE4UvTSVWXXjQa/view?usp=sharing) . Atualizado em Setembro/2024

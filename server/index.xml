@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fernando L. Couto</title>
+    <link>https://flccodes.github.io/</link>
+    <description>Recent content on Fernando L. Couto</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>fernandolcouto@gmail.com (Fernando L. Couto)</managingEditor>
+    <webMaster>fernandolcouto@gmail.com (Fernando L. Couto)</webMaster>
+    <lastBuildDate>Mon, 14 Aug 2023 13:37:35 -0300</lastBuildDate><atom:link href="https://flccodes.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Basic about Go Time</title>
+      <link>https://flccodes.github.io/posts/gonotes/time/basicgotime01/</link>
+      <pubDate>Mon, 14 Aug 2023 13:37:35 -0300</pubDate>
+      <author>fernandolcouto@gmail.com (Fernando L. Couto)</author>
+      <guid>https://flccodes.github.io/posts/gonotes/time/basicgotime01/</guid>
+      <description>Estrutura do Pacote O pacote Time contem um poderoso ferramental que permite ao utilizador de Go manipular/exibir1 dados sobre o tempo.
+Alguns recursos do pacote:
+Funções:
+After() Sleep() Tick() Types:
+Duration Location Month ParseError Ticker Time Timer Weekday Além das três funções elencadas, cada Type possui seu conjunto de Métodos que entregam versatilidade no manuseio de operações envolvendo tempo. Esses recursos estão distribuidos nos arquivos fonte:
+format.go format_rfc3339.go sleep.go sys_unix.go tick.</description>
+    </item>
+    
+    <item>
+      <title>Simples e Funcional</title>
+      <link>https://flccodes.github.io/posts/simplesefuncional/</link>
+      <pubDate>Wed, 17 May 2023 18:57:40 -0300</pubDate>
+      <author>fernandolcouto@gmail.com (Fernando L. Couto)</author>
+      <guid>https://flccodes.github.io/posts/simplesefuncional/</guid>
+      <description>A conhecida &amp;ldquo;Metáfora do Martelo&amp;rdquo; versa sobre saber onde usá-lo. Essa é, de fato, uma habilidade esperada dos profissionais mais experimentados. De forma simples, ouso afirmar que ter conhecimento, i.e., apenas saber algo, não é suficiente. É necessário, pois, discenir sobre seu uso. Isto denota ação e requer orientação, sentido, ou ainda direcionamento.
+Em uma publicação no seu Blog1, o engenheiro Fatih Arslan2, argumenta que &amp;ldquo;usar um único arquivo de configuração init.</description>
+    </item>
+    
+    <item>
+      <title>Conhecimento Superior</title>
+      <link>https://flccodes.github.io/posts/conhecimentosuperior/</link>
+      <pubDate>Sun, 14 May 2023 18:46:52 -0300</pubDate>
+      <author>fernandolcouto@gmail.com (Fernando L. Couto)</author>
+      <guid>https://flccodes.github.io/posts/conhecimentosuperior/</guid>
+      <description>(&amp;hellip;) Na verdade, como se diz, “todos nós temos conhecimento.” Porém esse tipo de conhecimento enche a pessoa de orgulho; mas o amor nos faz progredir na fé. A pessoa que pensa que sabe alguma coisa ainda não tem a sabedoria que precisa. Mas quem ama a Deus é conhecido por ele. (1 Corintios 8:1 - 3)
+O &amp;ldquo;tipo de conhecimento [que] enche a pessoa de orgulho&amp;rdquo; é o que viola o que é santo, cheio de contradições, e, portanto, apropriadamente entendido como &amp;ldquo;falso conhecimento&amp;rdquo; (1 Timóteo 6:20).</description>
+    </item>
+    
+    <item>
+      <title>Fernando Luis Couto da Silva</title>
+      <link>https://flccodes.github.io/cv/cv/</link>
+      <pubDate>Sun, 14 May 2023 18:23:34 -0300</pubDate>
+      <author>fernandolcouto@gmail.com (Fernando L. Couto)</author>
+      <guid>https://flccodes.github.io/cv/cv/</guid>
+      <description>Informações Pessoais Brasileiro, casado, 58 anos (Nov./1966) Residente no Bairro Havaí, região Oeste de Belo Horizonte/MG Email: fernandolcouto@gmail.com Telefone: (31) 9.8633-1811 LinkedIn: https://www.linkedin.com/in/fernandolcouto/ Atualizado em Junho/2024 Objetivo / Interesse De forma presencial ou remota, desejo atuar nas áreas Administrativa / Financeira, dando suporte a: Relacionamento com Clientes, Jurídico, Gerências e Diretoria. Algumas habilidades / Recursos Profissionais Profissional com mais de 30 anos de experiência oriunda de atuações contínuas em Controladorias, ou junto a estas, que me ensinaram a ter flexibilidade, ser adaptável e capaz de aliar técnica, disposição e visão holística.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://flccodes.github.io/about/</link>
+      <pubDate>Sun, 14 May 2023 17:59:51 -0300</pubDate>
+      <author>fernandolcouto@gmail.com (Fernando L. Couto)</author>
+      <guid>https://flccodes.github.io/about/</guid>
+      <description>&amp;ldquo;O ser humano é do tamanho do conhecimento que possui&amp;rdquo;, ou, como muitas pessoas afirmam, &amp;ldquo;aquilo que o homem ignora torna sua percepção do universo menor&amp;rdquo;. Desconheço o(s) autor(es) e não, com certeza, não pretendo usar este espaço para [apenas] fazer anotações de frases. Embora, exista uma atribuída ao matemático e filósofo inglês Bertrand Rusell que julgo apropriada para introduzir alguns pensamentos: &amp;ldquo;O que as pessoas querem não é o conhecimento, mas a certeza&amp;rdquo;.</description>
+    </item>
+    
+  </channel>
+</rss>
