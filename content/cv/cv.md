@@ -21,7 +21,7 @@ tags: ["cv"]
 Profissional com ampla vivência e experiência em Controladorias, onde desenvolvi flexibilidade e adaptabilidade, desempenhando papéis relacionados a:  
 
 
-* Atuação em equipes multidisciplinares fazendo a interface entre o Financeiro / Produção / Comercial / Jurídico, conectando Tesouraria, Contas a Pagar / Receber à Contabilidade, realizando e/ou coordenando equipes, usando:
+* Atuação em equipes multidisciplinares fazendo a interface entre o Financeiro / Produção / Comercial / Jurídico, conectando Tesouraria, Contas a Pagar / Receber à Contabilidade, realizando essas atividades e/ou coordenando equipes, usando:
 
   - Classificação de lançamentos contábeis
   - Conciliação de contas (Bancos, Caixa, Clientes, Fornecedores, etc.)
