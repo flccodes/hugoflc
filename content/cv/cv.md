@@ -18,24 +18,24 @@ tags: ["cv"]
 
 ### Algumas habilidades / Recursos Profissionais
 
-Profissional com ampla vivência e experiência em Controladorias, onde desenvolvi flexibilidade e adaptabilidade, desempenhando papéis relacionados a:  
+Profissional, flexível e adaptável, com ampla vivência e experiência em Controladorias desempenhando papéis relacionados a:  
 
 
-* Atuação em equipes multidisciplinares fazendo a interface entre o Financeiro / Produção / Comercial / Jurídico, conectando Tesouraria, Contas a Pagar / Receber à Contabilidade, realizando essas atividades e/ou coordenando equipes, usando:
+* Atuação em equipes multidisciplinares fazendo a interface entre o Financeiro / Produção / Comercial / Jurídico, conectando Tesouraria, Contas a Pagar e Receber à Contabilidade, realizando essas atividades e/ou coordenando equipes, usando:
 
   - Classificação de lançamentos contábeis
   - Conciliação de contas (Bancos, Caixa, Clientes, Fornecedores, etc.)
   - Faturamento / Cobrança; Controle de Ordem de Compra / Pagamentos
-  - Apuração de impostos
-  - Análise e revisão de contratos
+  - Análise e revisão de contratos, especialmente bancários
 
+* Relacionamento com bancos: avaliação de operações para captação de recursos
 * Elaboração e análise de demonstrações financeiras _gerenciais_ (BP, DRE, DFC)
-* Aplicação de Matemática Financeira com robusto uso de planilhas eletrônicas (LibreOfficeCalc, Google Sheets, MS Excel)
+* Aplicação de Matemática Financeira com robusto uso de planilhas eletrônicas (MS Excel, LibreOfficeCalc, Google Sheets)
 
 
 ### Outros Recursos Profissionais
 
-* Familiaridade com:
+* Além de MS Office / Libre Office, familiaridade com:
   - Estatística usando Python (Numpy, Pandas, Matplotlib), R (RStudio)
   - Linux, Vim, Bash, Git, Virtualização, HTML, CSS, Markdown, JavaScript (Google Apps Script), SQL e Go (Golang)
   - Noções Básicas de Rede
@@ -46,6 +46,7 @@ Profissional com ampla vivência e experiência em Controladorias, onde desenvol
 ### Formação / Estudos
 * Graduado na área de Administração (Gestão Financeira)
 * Inglês básico: leitura
+* Atualmente (Set/2024) pleiteando vaga no curso (EAD) de Especialização em Engenharia de Produção na UFJF
 
 
 ### Histórico das Experiências
@@ -74,4 +75,4 @@ Profissional com ampla vivência e experiência em Controladorias, onde desenvol
 * Assistente de Contas a Receber / Pagar e Tesouraria: Grupo Belauto Período 1986 - 1989
 
 
-#### [Faça o download deste CV em formato PDF](https://drive.google.com/file/d/1EctpxJfgMtC9Hlvh7dwE4UvTSVWXXjQa/view?usp=sharing) . Atualizado em Setembro/2024
+#### [Faça o download deste CV em formato PDF](https://drive.google.com/file/d/1spDWgJEjVfiakgT1NfIxBZo81SaXzinW/view?usp=drive_link) . Atualizado em Setembro/2024
