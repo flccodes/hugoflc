@@ -7,35 +7,35 @@ tags: ["cv"]
 
 ### Informações Pessoais
 
-* Brasileiro, casado, residente em Belo Horizonte/MG (CEP 30.555-150)
+* Brasileiro, casado, residente na Região Oeste de Belo Horizonte/MG 
 * **Email**: [fernandolcouto@gmail.com](mailto:fernandolcouto@gmail.com) / **WhatsApp**: (31) 9.8484-1811
  
 
 ### Objetivo / Interesse
 
-* Atuar nas áreas Administrativa / Financeira / Comercial. 
+* Atuar nas áreas Administrativa / Financeira 
 * Disponibilidade para: Presencial / Híbrido / Remoto.
 
-### Algumas habilidades / Recursos Profissionais
+### Habilidades / Recursos Profissionais
 
-Profissional, flexível e adaptável, com ampla vivência e experiência em Controladorias desempenhando papéis relacionados a:  
+Profissional flexível e adaptável, com ampla vivência em Controladorias desempenhando papéis relacionados a:  
 
 
 * Atuação em equipes multidisciplinares fazendo a interface entre o Financeiro / Produção / Comercial / Jurídico, conectando Tesouraria, Contas a Pagar e Receber à Contabilidade, realizando essas atividades e/ou coordenando equipes, usando:
 
   - Classificação de lançamentos contábeis
   - Conciliação de contas (Bancos, Caixa, Clientes, Fornecedores, etc.)
-  - Faturamento / Cobrança; Controle de Ordem de Compra / Pagamentos
+  - Faturamento / Cobrança; Compras / Pagamentos
   - Análise e revisão de contratos, especialmente bancários
 
-* Relacionamento com bancos: avaliação de operações para captação de recursos
-* Elaboração e análise de demonstrações financeiras _gerenciais_ (BP, DRE, DFC)
+* Relacionamento com bancos: Avaliação de operações para captação de recursos
+* Elaboração e análise de Demonstrações Financeiras _gerenciais_ (BP, DRE, DFC)
 * Aplicação de Matemática Financeira com robusto uso de planilhas eletrônicas (MS Excel, LibreOfficeCalc, Google Sheets)
 
 
 ### Outros Recursos Profissionais
 
-* Além de MS Office / Libre Office, familiaridade com:
+* MS Office / Libre Office e familiaridade com:
   - Estatística usando Python (Numpy, Pandas, Matplotlib), R (RStudio)
   - Linux, Vim, Bash, Git, Virtualização, HTML, CSS, Markdown, JavaScript (Google Apps Script), SQL e Go (Golang)
   - Noções Básicas de Rede
@@ -46,25 +46,24 @@ Profissional, flexível e adaptável, com ampla vivência e experiência em Cont
 ### Formação / Estudos
 * Graduado na área de Administração (Gestão Financeira)
 * Inglês básico: leitura
-* Atualmente (Set/2024) pleiteando vaga no curso (EAD) de Especialização em Engenharia de Produção na UFJF
-
 
 ### Histórico das Experiências
 
-#### Analista de Negócios: FLCS Assessoria Negocial Ltda (Ago/2008 - atual)
+#### Gestor de Negócios: FLCS Assessoria Negocial Ltda (Ago/2008 - atual)
 * Serviços de consultoria que abarcam o diagnóstico e planejamento de ações para gestão de passivos
 * Apoio a escritórios de advocacia objetivando promover o reequilíbrio em contratos mediante a identificação e expurgo de cobranças em excesso
-* Atuação como assistente técnico em ações revisionais
+* Atuação como Assistente Técnico em ações revisionais
 
 
-#### Analista de Negócios: Organizer Ltda (Mar/2007 - Jul/2008)
+#### Gestor de Negócios: Organizer Ltda (Mar/2007 - Jul/2008)
 * Serviços de consultoria tendo como mercado alvo empresas em processo de reestruturação financeira para gestão de passivos
 * Apoio a escritórios de advocacia objetivando promover o reequilíbrio em contratos mediante a identificação e expurgo de cobranças em excesso
+* Atuação como Assistente Técnico em ações revisionais
 
 
 #### Gerente Adm./Financeiro: LINK Factoring Ltda (Jun/1996 - Fev/2007)
 * Gerenciamento de uma sociedade limitada no ramo de fomento mercantil, realizando serviços de assessoria e gestão de crédito, seleção e riscos, administração de contas a pagar e a receber, compras de direitos creditórios resultantes de vendas mercantis a prazo ou de prestação de serviços
-* Responsável pela análise e prospecção de novos negócios, abarcando análise cadastral e da viabilidade da operação do fomentado
+* Responsável pela análise e prospecção de novos negócios, abrangendo análise cadastral e avaliação da viabilidade da operação do fomentado
 * Gestão de todas as operações de crédito e respectiva carteira de recebíveis: Cobrança e Recuperação de Ativos
 
 
@@ -75,4 +74,4 @@ Profissional, flexível e adaptável, com ampla vivência e experiência em Cont
 * Assistente de Contas a Receber / Pagar e Tesouraria: Grupo Belauto Período 1986 - 1989
 
 
-#### [Faça o download deste CV em formato PDF](https://drive.google.com/file/d/1spDWgJEjVfiakgT1NfIxBZo81SaXzinW/view?usp=drive_link) . Atualizado em Setembro/2024
+#### [Faça o download deste CV em formato PDF](https://drive.google.com/file/d/1jsAAff-4ZAO0oarWbPpe4C8NAyZZCxzV/view) . Atualizado em Janeiro/2025
