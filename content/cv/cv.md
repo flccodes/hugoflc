@@ -74,4 +74,4 @@ Profissional flexível e adaptável, com ampla vivência em Controladorias desem
 * Assistente de Contas a Receber / Pagar e Tesouraria: Grupo Belauto Período 1986 - 1989
 
 
-#### [Faça o download deste CV em formato PDF](https://drive.google.com/file/d/1jsAAff-4ZAO0oarWbPpe4C8NAyZZCxzV/view) . Atualizado em Janeiro/2025
+#### [Faça o download deste CV em formato PDF](https://drive.google.com/file/d/1jsAAff-4ZAO0oarWbPpe4C8NAyZZCxzV/view) . Atualizado: Janeiro/2025
