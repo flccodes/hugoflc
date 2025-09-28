@@ -2,6 +2,7 @@
 title: "Fernando Luis Couto da Silva"
 date: 2023-05-14T18:23:34-03:00
 author: "Fernando Luis Couto"
+draft: false
 tags: ["cv"]
 ---
 

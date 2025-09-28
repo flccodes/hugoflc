@@ -2,6 +2,7 @@
 title: "About"
 date: 2023-05-14T17:59:51-03:00
 author: "FernandoLCouto"
+draft: false
 tags: ["about", "conhecimento"]
 ---
 
