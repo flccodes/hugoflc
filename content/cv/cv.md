@@ -26,7 +26,7 @@ Profissional flexível e adaptável, com ampla vivência em Controladorias desem
   - Classificação de lançamentos contábeis
   - Conciliação de contas (Bancos, Caixa, Clientes, Fornecedores, etc.)
   - Faturamento / Cobrança; Compras / Pagamentos
-  - Análise e revisão de contratos, especialmente bancários
+  - Análise e revisão de contratos, especialmente, bancários
 
 * Relacionamento com bancos: Avaliação de operações para captação de recursos
 * Elaboração e análise de Demonstrações Financeiras _gerenciais_ (BP, DRE, DFC)
@@ -74,4 +74,4 @@ Profissional flexível e adaptável, com ampla vivência em Controladorias desem
 * Assistente de Contas a Receber / Pagar e Tesouraria: Grupo Belauto Período 1986 - 1989
 
 
-#### [Faça o download deste CV em formato PDF](https://drive.google.com/file/d/1jsAAff-4ZAO0oarWbPpe4C8NAyZZCxzV/view) . Atualizado: Janeiro/2025
+#### [Faça o download deste CV em formato PDF](https://drive.google.com/file/d/1qfmAac81FooPe0LnNVtWXM9vbswypCnp/view) . Atualizado: Janeiro/2025
