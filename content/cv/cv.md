@@ -14,10 +14,10 @@ tags: ["cv"]
 
 ### Objetivo / Interesse
 
-* Atuar nas áreas Administrativa / Financeira 
+* Atuar nas áreas Administrativa / Financeira.
 * Disponibilidade para: Presencial / Híbrido / Remoto.
 
-### Habilidades / Recursos Profissionais
+### Algumas habilidades / Recursos Profissionais
 
 Profissional flexível e adaptável, com ampla vivência em Controladorias desempenhando papéis relacionados a:  
 
@@ -30,7 +30,7 @@ Profissional flexível e adaptável, com ampla vivência em Controladorias desem
   - Análise e revisão de contratos, especialmente, bancários
 
 * Relacionamento com bancos: Avaliação de operações para captação de recursos
-* Elaboração e análise de Demonstrações Financeiras _gerenciais_ (BP, DRE, DFC)
+* Elaboração e análise de Demonstrações Financeiras _Gerenciais_ (BP, DRE, DFC)
 * Aplicação de Matemática Financeira com robusto uso de planilhas eletrônicas (MS Excel, LibreOfficeCalc, Google Sheets)
 
 
@@ -39,14 +39,14 @@ Profissional flexível e adaptável, com ampla vivência em Controladorias desem
 * MS Office / Libre Office e familiaridade com:
   - Estatística usando Python (Numpy, Pandas, Matplotlib), R (RStudio)
   - Linux, Vim, Bash, Git, Virtualização, HTML, CSS, Markdown, JavaScript (Google Apps Script), SQL e Go (Golang)
-  - Noções Básicas de Rede
+  - Aplicação de regras de negócios em Sistemas como: ASAAS, Bling, Conta Azul
 * Experiência home office/híbrido desde 2008
 * Opção de contratação por PJ
 
 
 ### Formação / Estudos
 * Graduado na área de Administração (Gestão Financeira)
-* Inglês básico: leitura
+* Inglês: Básico
 
 ### Histórico das Experiências
 
@@ -75,4 +75,4 @@ Profissional flexível e adaptável, com ampla vivência em Controladorias desem
 * Assistente de Contas a Receber / Pagar e Tesouraria: Grupo Belauto Período 1986 - 1989
 
 
-#### [Faça o download deste CV em formato PDF](https://drive.google.com/file/d/1qfmAac81FooPe0LnNVtWXM9vbswypCnp/view) . Atualizado: Janeiro/2025
+#### [Faça o download deste CV em formato PDF](https://drive.google.com/file/d/1rpssu-y_6y5Ss5FJV_USRIfUgxCvk7K5/view?usp=sharing) . Atualizado: Outubro/2025
