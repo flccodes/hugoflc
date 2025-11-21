@@ -15,7 +15,6 @@ tags: ["cv"]
 ### Objetivo / Interesse
 
 * Atuar nas áreas Administrativa / Financeira.
-* Disponibilidade para: Presencial / Híbrido / Remoto.
 
 ### Algumas habilidades / Recursos Profissionais
 
@@ -29,6 +28,7 @@ Profissional flexível e adaptável, com ampla vivência em Controladorias desem
   - Faturamento / Cobrança; Compras / Pagamentos
   - Análise e revisão de contratos, especialmente, bancários
 
+* Coleta de documentos/informações para análise cadastral e de viabilidade econômica
 * Relacionamento com bancos: Avaliação de operações para captação de recursos
 * Elaboração e análise de Demonstrações Financeiras _Gerenciais_ (BP, DRE, DFC)
 * Aplicação de Matemática Financeira com robusto uso de planilhas eletrônicas (MS Excel, LibreOfficeCalc, Google Sheets)
@@ -75,4 +75,4 @@ Profissional flexível e adaptável, com ampla vivência em Controladorias desem
 * Assistente de Contas a Receber / Pagar e Tesouraria: Grupo Belauto Período 1986 - 1989
 
 
-#### [Faça o download deste CV em formato PDF](https://drive.google.com/file/d/1rpssu-y_6y5Ss5FJV_USRIfUgxCvk7K5/view?usp=sharing) . Atualizado: Outubro/2025
+#### [Faça o download deste CV em formato PDF](https://drive.google.com/file/d/1kPCPkr7CYBfrVy5aPU-7Wr3qZzNzQ4It/view?usp=sharing) . Atualizado: Novembro/2025
