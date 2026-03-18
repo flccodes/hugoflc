@@ -118,3 +118,7 @@ pygmentsCodefencesGuessSyntax = true
     name = "CV"
     url = "/cv/"
     weight = 3
+
+[markup.goldmark.renderHooks.link]
+enableDefault = true
+
