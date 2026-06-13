@@ -82,14 +82,14 @@ pygmentsCodefencesGuessSyntax = true
     weight = 1
 
 [[menu.main]]
-    name = "About"
-    url = "/about/"
-    weight = 3
+    name = "Curso (TDS)"
+    url = "/curso/"
+    weight = 2
 
 [[menu.main]]
     identifier = "thoughs"
     name = "Thoughs"
-    weight = 2
+    weight = 3
 
 [[menu.main]]
     parent = "thoughs"
@@ -112,12 +112,17 @@ pygmentsCodefencesGuessSyntax = true
 [[menu.main]]
     name = "Tags"
     url = "/tags/"
-    weight = 3
+    weight = 4
 
 [[menu.main]]
     name = "CV"
     url = "/cv/"
-    weight = 3
+    weight = 5
+
+[[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 6
 
 [markup.goldmark.renderHooks.link]
 enableDefault = true
