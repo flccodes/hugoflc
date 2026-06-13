@@ -3,11 +3,6 @@ title: "Técnico em Desenvolvimento de Sistemas"
 subtitle: "Diário de bordo do curso subsequente EAD no IFSULDEMINAS"
 layout: "section"
 description: "Notas de estudos, testes e anotações divididos por módulos e disciplinas."
-menu:
-  main:
-    name: "Curso (TDS)"
-    identifier: "curso"
-    weight: 2
 ---
 
 # Técnico em Desenvolvimento de Sistemas

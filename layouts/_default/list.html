@@ -7,6 +7,23 @@
             {{.}}
           </div>
         {{ end }}
+
+        {{ if .Sections }}
+          <div class="well" style="padding: 20px; border-radius: 8px; margin-bottom: 30px;">
+            <h3 style="margin-top: 0; font-weight: bold; border-bottom: 2px solid #eeeeee; padding-bottom: 10px; margin-bottom: 15px;">Módulos / Disciplinas</h3>
+            <div class="list-group" style="margin-bottom: 0; box-shadow: none;">
+              {{ range .Sections }}
+                <a href="{{ .Permalink }}" class="list-group-item" style="border: 1px solid #ddd; margin-bottom: 8px; border-radius: 4px; transition: background 0.2s;">
+                  <h4 class="list-group-item-heading" style="color: #2c3e50; font-weight: bold; margin-top: 5px; margin-bottom: 5px;">{{ .Title }}</h4>
+                  {{ if .Params.subtitle }}
+                    <p class="list-group-item-text text-muted" style="font-size: 13px; margin-bottom: 5px;">{{ .Params.subtitle }}</p>
+                  {{ end }}
+                </a>
+              {{ end }}
+            </div>
+          </div>
+        {{ end }}
+
         <div class="posts-list">
           {{ range .Paginator.Pages }}
             {{ partial "post_preview.html" .}}
