@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on Fernando L. Couto</title>
+    <link>https://flccodes.github.io/git/</link>
+    <description>Recent content in Git on Fernando L. Couto</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>fernandolcouto@gmail.com (Fernando L. Couto)</managingEditor>
+    <webMaster>fernandolcouto@gmail.com (Fernando L. Couto)</webMaster>
+    <lastBuildDate>Sat, 13 Jun 2026 20:35:00 -0300</lastBuildDate>
+    <atom:link href="https://flccodes.github.io/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Diretrizes de Commits e Fluxo Git</title>
+      <link>https://flccodes.github.io/git/diretrizes-commits/</link>
+      <pubDate>Sat, 13 Jun 2026 20:35:00 -0300</pubDate><author>fernandolcouto@gmail.com (Fernando L. Couto)</author>
+      <guid>https://flccodes.github.io/git/diretrizes-commits/</guid>
+      <description>Diretrizes para Commits Atômicos e Fluxo de Trabalho Esta página serve como diretriz para a organização e versionamento deste repositório de aprendizado. Ela resume a nossa conversa sobre a melhor forma de lidar com o Git no dia a dia.&#xA;1. O que é um &amp;ldquo;Commit Atômico&amp;rdquo; Um commit é considerado atômico quando representa uma única unidade lógica de trabalho completa.&#xA;Evite commits fragmentados: O Git não rastreia pastas vazias (apenas arquivos).</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Slices on Fernando L. Couto</title>
+    <link>https://flccodes.github.io/golang/stdlib/slices/</link>
+    <description>Recent content in Slices on Fernando L. Couto</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>fernandolcouto@gmail.com (Fernando L. Couto)</managingEditor>
+    <webMaster>fernandolcouto@gmail.com (Fernando L. Couto)</webMaster>
+    <lastBuildDate>Tue, 17 Mar 2026 11:52:12 -0300</lastBuildDate>
+    <atom:link href="https://flccodes.github.io/golang/stdlib/slices/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Basic about Go Slices</title>
+      <link>https://flccodes.github.io/golang/stdlib/slices/basicgoslices01/</link>
+      <pubDate>Tue, 17 Mar 2026 11:52:12 -0300</pubDate><author>fernandolcouto@gmail.com (Fernando L. Couto)</author>
+      <guid>https://flccodes.github.io/golang/stdlib/slices/basicgoslices01/</guid>
+      <description>An Introduction to Slices This discussion approaches ARRAY, SLICE, Slice internals, Growing slices and A possible “gotcha” from the source available in: Go Slices: usage and internals&#xA;ARRAY First of all to understand SLICEit&amp;rsquo;s necessary understand ARRAYin Go, since the slice type is an abstraction that comes from Go&amp;rsquo;s array type. Thus the ARRAY [5]int has the type [5]int which represents an ARRAYof ten integers elements, where the array’s size is fixed and its length is part of its type.</description>
+    </item>
+  </channel>
+</rss>

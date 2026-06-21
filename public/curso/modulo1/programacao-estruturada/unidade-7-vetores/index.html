@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+ 
+
+
+      <title>Unidade 7: Vetores (Arrays) - </title>
+
+  <meta name="description" content="Esta unidade cobre a estrutura de dados homogênea mais básica na Linguagem C: os Vetores (Arrays).
+As anotações abaixo foram compiladas com base no Questionário 5 (Unidades 5, 6 e 7) (que obteve nota máxima de 50,0/50,0 - 100%, arquivo correspondente: Questionário 5 (PDF)).
+📌 Teoria Essencial sobre Vetores em C Definição: Um vetor é uma estrutura de dados homogênea e estática: Homogênea: Todos os elementos armazenados são obrigatoriamente do mesmo tipo (por exemplo, todos são int ou todos são float).">
+  <meta name="author" content="Fernando L. Couto"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Fernando L. Couto",
+    
+    "url": "https:\/\/flccodes.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/flccodes.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/flccodes.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/flccodes.github.io\/curso\/modulo1\/programacao-estruturada\/unidade-7-vetores\/",
+          "name": "Unidade 7 vetores ( arrays)"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Fernando L. Couto"
+  },
+  "headline": "Unidade 7: Vetores (Arrays)",
+  "description" : "Esta unidade cobre a estrutura de dados homogênea mais básica na Linguagem C: os Vetores (Arrays).\nAs anotações abaixo foram compiladas com base no Questionário 5 (Unidades 5, 6 e 7) (que obteve nota máxima de 50,0\/50,0 - 100%, arquivo correspondente: Questionário 5 (PDF)).\n📌 Teoria Essencial sobre Vetores em C Definição: Um vetor é uma estrutura de dados homogênea e estática: Homogênea: Todos os elementos armazenados são obrigatoriamente do mesmo tipo (por exemplo, todos são int ou todos são float).",
+  "inLanguage" : "en",
+  "wordCount":  824 ,
+  "datePublished" : "2026-06-21T19:47:54",
+  "dateModified" : "2026-06-21T19:47:54",
+  "image" : "https:\/\/flccodes.github.io\/img\/avatar-icon.jpg",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "https:\/\/flccodes.github.io\/curso\/modulo1\/programacao-estruturada\/unidade-7-vetores\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/flccodes.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/flccodes.github.io\/img\/avatar-icon.jpg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Unidade 7: Vetores (Arrays)" />
+<meta property="og:description" content="Esta unidade cobre a estrutura de dados homogênea mais básica na Linguagem C: os Vetores (Arrays).
+As anotações abaixo foram compiladas com base no Questionário 5 (Unidades 5, 6 e 7) (que obteve nota máxima de 50,0/50,0 - 100%, arquivo correspondente: Questionário 5 (PDF)).
+📌 Teoria Essencial sobre Vetores em C Definição: Um vetor é uma estrutura de dados homogênea e estática: Homogênea: Todos os elementos armazenados são obrigatoriamente do mesmo tipo (por exemplo, todos são int ou todos são float).">
+<meta property="og:image" content="https://flccodes.github.io/img/avatar-icon.jpg" />
+<meta property="og:url" content="https://flccodes.github.io/curso/modulo1/programacao-estruturada/unidade-7-vetores/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Fernando L. Couto" />
+
+  <meta name="twitter:title" content="Unidade 7: Vetores (Arrays)" />
+  <meta name="twitter:description" content="Esta unidade cobre a estrutura de dados homogênea mais básica na Linguagem C: os Vetores (Arrays).
+As anotações abaixo foram compiladas com base no Questionário 5 (Unidades 5, 6 e 7) (que obteve nota …">
+  <meta name="twitter:image" content="https://flccodes.github.io/img/avatar-icon.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link href='https://flccodes.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.131.0">
+  <link rel="alternate" href="https://flccodes.github.io/index.xml" type="application/rss+xml" title="Fernando L. Couto"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://flccodes.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://flccodes.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://flccodes.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+  
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://flccodes.github.io/">Fernando L. Couto</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Posts" href="/posts/">Posts</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Curso (TDS)" href="/curso/">Curso (TDS)</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Golang" href="/golang/">Golang</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Estudos Bíblicos" href="/estudos-biblicos/">Estudos Bíblicos</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Math" href="/math/">Math</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Git" href="/git/">Git</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Thoughs</a>
+              <div class="navlinks-children">
+                
+                  <a href="/post/2017-03-07-bigimg-sample">Big Image Sample</a>
+                
+                  <a href="/post/2017-03-05-math-sample">Math Sample</a>
+                
+                  <a href="/post/2016-03-08-code-sample">Code Sample</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags/">Tags</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="CV" href="/cv/">CV</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Fernando L. Couto" href="https://flccodes.github.io/">
+            <img class="avatar-img" src="https://flccodes.github.io/img/avatar-icon.jpg" alt="Fernando L. Couto" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="curso-heading">
+              
+                <h2>Unidade 7: Vetores (Arrays)</h2>
+              
+              
+                <hr class="small">
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Esta unidade cobre a estrutura de dados homogênea mais básica na Linguagem C: os <strong>Vetores (Arrays)</strong>.</p>
+<p>As anotações abaixo foram compiladas com base no <strong>Questionário 5 (Unidades 5, 6 e 7)</strong> (que obteve nota máxima de 50,0/50,0 - 100%, arquivo correspondente: <a href="file:///home/sl01/go/src/github.com/flccodes/youandi/sources/Question%C3%A1rio%205_Un_5-6-7%20-%20IFSULDEMINAS.pdf">Questionário 5 (PDF)</a>).</p>
+<hr>
+<h2 id="-teoria-essencial-sobre-vetores-em-c">📌 Teoria Essencial sobre Vetores em C</h2>
+<ol>
+<li><strong>Definição:</strong> Um vetor é uma estrutura de dados <strong>homogênea</strong> e <strong>estática</strong>:
+<ul>
+<li><strong>Homogênea:</strong> Todos os elementos armazenados são obrigatoriamente do mesmo tipo (por exemplo, todos são <code>int</code> ou todos são <code>float</code>). Diferente de uma <code>struct</code>, um vetor não mistura tipos de dados.</li>
+<li><strong>Estática:</strong> O tamanho do vetor é definido no momento da declaração e não pode ser alterado durante a execução do programa.</li>
+</ul>
+</li>
+<li><strong>Acesso Direto (Acesso Aleatório):</strong> O tempo necessário para acessar qualquer posição do vetor é constante ($O(1)$). O computador calcula o endereço diretamente a partir do índice:
+$$\text{Endereço} = \text{Endereço Base} + (\text{Índice} \times \text{Tamanho do Tipo})$$</li>
+<li><strong>Índices (A Regra de Ouro):</strong> Em C, um vetor de tamanho $N$ possui índices válidos estritamente de <strong>$0$ a $N-1$</strong>.
+<ul>
+<li>Exemplo: <code>int vetor[10]</code> tem as posições válidas de <code>0</code> a <code>9</code>. Acessar <code>vetor[10]</code> é um estouro de limite de memória (<em>buffer overflow</em>).</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="-questões-analisadas--lições-práticas">📝 Questões Analisadas &amp; Lições Práticas</h2>
+<h3 id="questão-2-impressão-em-ordem-inversa">Questão 2: Impressão em Ordem Inversa</h3>
+<ul>
+<li><strong>Código:</strong>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">vetor</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// ... [Leitura do vetor] ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span> <span class="c1">// Comando correto para inverter
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34; %d &#34;</span><span class="p">,</span> <span class="n">vetor</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</span></span></code></pre></div></li>
+<li><strong>Análise de Alternativas e Erros Comuns:</strong>
+<ul>
+<li><em>❌ O erro de início e limite:</em> Usar <code>for (i=10; i&gt;0; i--)</code> causa dois bugs. Primeiro: tenta ler <code>vetor[10]</code>, que está fora do vetor (invasão de memória). Segundo: o loop para antes de chegar no índice <code>0</code> (porque a condição é <code>i &gt; 0</code>), deixando de imprimir o primeiro valor do vetor.</li>
+<li><em>✅ A solução correta:</em> Iniciar no último índice válido (<code>9</code>) e incluir a igualdade a zero na condição (<code>i &gt;= 0</code>).</li>
+</ul>
+</li>
+</ul>
+<h3 id="questão-4-procurando-o-maior-valor">Questão 4: Procurando o Maior Valor</h3>
+<ul>
+<li><strong>Código correto:</strong>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">vetor</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">i</span><span class="p">,</span> <span class="n">maior</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// ... [Leitura] ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">maior</span> <span class="o">=</span> <span class="n">vetor</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span> <span class="c1">// Inicia com o primeiro elemento
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">maior</span> <span class="o">&lt;</span> <span class="n">vetor</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="n">maior</span> <span class="o">=</span> <span class="n">vetor</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div></li>
+<li><strong>💡 Aprendizado:</strong> Para encontrar o maior ou menor valor, a inicialização da variável <code>maior</code> deve ser sempre com um valor do próprio vetor (ex: <code>vetor[0]</code>), e não com valores arbitrários (como <code>100</code>), garantindo que o programa funcione mesmo que todos os números digitados sejam menores que essa constante arbitrária.</li>
+</ul>
+<h3 id="questão-7-teste-de-mesa-com-atribuição-em-cadeia-anagrama-amazonas">Questão 7: Teste de Mesa com Atribuição em Cadeia (Anagrama Amazonas)</h3>
+<ul>
+<li><strong>Enunciado:</strong> Dado o vetor inicial <code>S M N A O Z A A</code> (índices 1 a 8) e as instruções de atribuição, determinar o estado final do vetor.</li>
+<li><strong>🧠 Rastreamento passo a passo (Tabela de Estados):</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Linha do Comando</th>
+<th style="text-align:center"><code>aux</code></th>
+<th style="text-align:center"><code>vet[1]</code></th>
+<th style="text-align:center"><code>vet[2]</code></th>
+<th style="text-align:center"><code>vet[3]</code></th>
+<th style="text-align:center"><code>vet[4]</code></th>
+<th style="text-align:center"><code>vet[5]</code></th>
+<th style="text-align:center"><code>vet[6]</code></th>
+<th style="text-align:center"><code>vet[7]</code></th>
+<th style="text-align:center"><code>vet[8]</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><em>Início</em></td>
+<td style="text-align:center"><code>-</code></td>
+<td style="text-align:center"><code>S</code></td>
+<td style="text-align:center"><code>M</code></td>
+<td style="text-align:center"><code>N</code></td>
+<td style="text-align:center"><code>A</code></td>
+<td style="text-align:center"><code>O</code></td>
+<td style="text-align:center"><code>Z</code></td>
+<td style="text-align:center"><code>A</code></td>
+<td style="text-align:center"><code>A</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>aux = vet[8]</code></td>
+<td style="text-align:center"><strong><code>A</code></strong></td>
+<td style="text-align:center"><code>S</code></td>
+<td style="text-align:center"><code>M</code></td>
+<td style="text-align:center"><code>N</code></td>
+<td style="text-align:center"><code>A</code></td>
+<td style="text-align:center"><code>O</code></td>
+<td style="text-align:center"><code>Z</code></td>
+<td style="text-align:center"><code>A</code></td>
+<td style="text-align:center"><code>A</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>vet[8] = vet[1]</code></td>
+<td style="text-align:center"><code>A</code></td>
+<td style="text-align:center"><code>S</code></td>
+<td style="text-align:center"><code>M</code></td>
+<td style="text-align:center"><code>N</code></td>
+<td style="text-align:center"><code>A</code></td>
+<td style="text-align:center"><code>O</code></td>
+<td style="text-align:center"><code>Z</code></td>
+<td style="text-align:center"><code>A</code></td>
+<td style="text-align:center"><strong><code>S</code></strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>vet[4] = vet[6]</code></td>
+<td style="text-align:center"><code>A</code></td>
+<td style="text-align:center"><code>S</code></td>
+<td style="text-align:center"><code>M</code></td>
+<td style="text-align:center"><code>N</code></td>
+<td style="text-align:center"><strong><code>Z</code></strong></td>
+<td style="text-align:center"><code>O</code></td>
+<td style="text-align:center"><code>Z</code></td>
+<td style="text-align:center"><code>A</code></td>
+<td style="text-align:center"><code>S</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>vet[6] = vet[3]</code></td>
+<td style="text-align:center"><code>A</code></td>
+<td style="text-align:center"><code>S</code></td>
+<td style="text-align:center"><code>M</code></td>
+<td style="text-align:center"><code>N</code></td>
+<td style="text-align:center"><code>Z</code></td>
+<td style="text-align:center"><code>O</code></td>
+<td style="text-align:center"><strong><code>N</code></strong></td>
+<td style="text-align:center"><code>A</code></td>
+<td style="text-align:center"><code>S</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>vet[3] = aux</code></td>
+<td style="text-align:center"><code>A</code></td>
+<td style="text-align:center"><code>S</code></td>
+<td style="text-align:center"><code>M</code></td>
+<td style="text-align:center"><strong><code>A</code></strong></td>
+<td style="text-align:center"><code>Z</code></td>
+<td style="text-align:center"><code>O</code></td>
+<td style="text-align:center"><code>N</code></td>
+<td style="text-align:center"><code>A</code></td>
+<td style="text-align:center"><code>S</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>vet[1] = aux</code></td>
+<td style="text-align:center"><code>A</code></td>
+<td style="text-align:center"><strong><code>A</code></strong></td>
+<td style="text-align:center"><code>M</code></td>
+<td style="text-align:center"><code>A</code></td>
+<td style="text-align:center"><code>Z</code></td>
+<td style="text-align:center"><code>O</code></td>
+<td style="text-align:center"><code>N</code></td>
+<td style="text-align:center"><code>A</code></td>
+<td style="text-align:center"><code>S</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Palavra Final:</strong> <strong>AMAZONAS</strong> (Índices 1 a 8).</li>
+<li><strong>⚠️ Lição Prática:</strong> Nunca tente fazer testes de mesa complexos mentalmente. Escrever cada alteração linha por linha em formato de tabela evita &ldquo;esquecer&rdquo; de rodar o último comando (como aconteceu ao errar inicialmente o <code>vet[1] = aux</code>).</li>
+</ul>
+<h3 id="questão-9-equivalência-de-loops-de-inicialização">Questão 9: Equivalência de Loops de Inicialização</h3>
+<ul>
+<li><strong>Estrutura Original:</strong>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">a</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+</span></span></code></pre></div></li>
+<li><strong>Estrutura Substituta:</strong>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">4</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span></code></pre></div></li>
+<li><strong>💡 Aprendizado:</strong> Para variáveis inteiras, <code>i &lt; 5</code> é equivalente a <code>i &lt;= 4</code>. Ambas as condições iteram exatamente os mesmos índices (<code>0, 1, 2, 3, 4</code>). O uso de <code>i &lt;= 5</code> causaria invasão de memória no índice <code>5</code> do vetor <code>a[5]</code>.</li>
+</ul>
+<h3 id="questão-10-semântica-de-atribuição-e-variável-indexadora">Questão 10: Semântica de Atribuição e Variável Indexadora</h3>
+<ul>
+<li><strong>Enunciado:</strong> <em>&ldquo;A atribuição de valores a um vetor já criado é procedida de elemento em elemento, alterando‐se o valor do índice do vetor.&rdquo;</em></li>
+<li><strong>Gabarito:</strong> <strong>Verdadeiro</strong></li>
+<li><strong>⚠️ Cuidado com a Terminologia:</strong> Gramaticalmente e logicamente, os índices do vetor permanecem constantes na estrutura física de memória. No entanto, o gabarito oficial considera &ldquo;alterar o valor do índice&rdquo; como o ato de <strong>variar o valor da variável indexadora</strong> (ex: incrementar o <code>i</code> em um loop) para percorrer o vetor posição por posição.</li>
+</ul>
+<hr>
+<h2 id="-autoavaliação-e-plano-de-ação">📈 Autoavaliação e Plano de Ação</h2>
+<blockquote>
+<p>[!TIP]</p>
+<ul>
+<li><strong>Escrever Sempre:</strong> O erro no anagrama &ldquo;Amazonas&rdquo; consolidou que, para provas de lógica estruturada, o papel e a caneta para desenhar tabelas de estados são ferramentas indispensáveis.</li>
+<li><strong>Regra de Limites:</strong> Fixar na mente que a última posição acessível em <code>tipo vetor[T]</code> é sempre <code>T-1</code>. Loops que terminam com <code>i &lt;= T</code> ou iniciam em <code>i = T</code> devem ser eliminados de imediato em questões de múltipla escolha.</li>
+</ul>
+</blockquote>
+
+
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2fflccodes.github.io%2fcurso%2fmodulo1%2fprogramacao-estruturada%2funidade-7-vetores%2f&amp;text=Unidade%207%3a%20Vetores%20%28Arrays%29&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fflccodes.github.io%2fcurso%2fmodulo1%2fprogramacao-estruturada%2funidade-7-vetores%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2fflccodes.github.io%2fcurso%2fmodulo1%2fprogramacao-estruturada%2funidade-7-vetores%2f&amp;title=Unidade%207%3a%20Vetores%20%28Arrays%29" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fflccodes.github.io%2fcurso%2fmodulo1%2fprogramacao-estruturada%2funidade-7-vetores%2f&amp;title=Unidade%207%3a%20Vetores%20%28Arrays%29" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fflccodes.github.io%2fcurso%2fmodulo1%2fprogramacao-estruturada%2funidade-7-vetores%2f&amp;title=Unidade%207%3a%20Vetores%20%28Arrays%29" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fflccodes.github.io%2fcurso%2fmodulo1%2fprogramacao-estruturada%2funidade-7-vetores%2f&amp;description=Unidade%207%3a%20Vetores%20%28Arrays%29" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+          
+            <li class="next">
+              <a href="https://flccodes.github.io/curso/modulo1/programacao-estruturada/unidade-4-loops/" data-toggle="tooltip" data-placement="top" title="Unidade 4: Estruturas de Repetição"> &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="https://www.flcoutos.com.br">Fernando L. Couto</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2026
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://flccodes.github.io/">Fernando L. Couto</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://flccodes.github.io/js/main.js"></script>
+<script src="https://flccodes.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://flccodes.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

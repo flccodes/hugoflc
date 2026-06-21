@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Guia Master: Recomendações e Práticas de Debug em Go on Fernando L. Couto</title>
+    <link>https://flccodes.github.io/golang/go/debug/</link>
+    <description>Recent content in Guia Master: Recomendações e Práticas de Debug em Go on Fernando L. Couto</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>fernandolcouto@gmail.com (Fernando L. Couto)</managingEditor>
+    <webMaster>fernandolcouto@gmail.com (Fernando L. Couto)</webMaster>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="https://flccodes.github.io/golang/go/debug/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

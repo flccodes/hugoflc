@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Redes de Computadores on Fernando L. Couto</title>
+    <link>https://flccodes.github.io/curso/modulo1/redes-computadores/</link>
+    <description>Recent content in Redes de Computadores on Fernando L. Couto</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>fernandolcouto@gmail.com (Fernando L. Couto)</managingEditor>
+    <webMaster>fernandolcouto@gmail.com (Fernando L. Couto)</webMaster>
+    <lastBuildDate>Sun, 21 Jun 2026 19:47:54 -0300</lastBuildDate>
+    <atom:link href="https://flccodes.github.io/curso/modulo1/redes-computadores/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Diário de Estudos - Redes de Computadores</title>
+      <link>https://flccodes.github.io/curso/modulo1/redes-computadores/diario-estudos/</link>
+      <pubDate>Sun, 21 Jun 2026 19:47:54 -0300</pubDate><author>fernandolcouto@gmail.com (Fernando L. Couto)</author>
+      <guid>https://flccodes.github.io/curso/modulo1/redes-computadores/diario-estudos/</guid>
+      <description>Curso Técnico em Desenvolvimento de Sistemas — IFSULDEMINAS Aluno: Hugo (Espaço de Trabalho: hugoflc)&#xA;🛠️ Trilha Tecnológica: Automação de Transcrições Nesta seção, registramos o progresso no desenvolvimento do script para extração de transcrições do YouTube.&#xA;O Script: extract_transcripts.py Desenvolvido em Python para extrair de forma assíncrona as transcrições das videoaulas e estruturar o material para estudo no NotebookLM.&#xA;[!TIP] Boas Práticas de Engenharia de Software:&#xA;Ambiente Virtual Isolado (.venv): Foi criado um ambiente virtual independente para a disciplina de Redes de Computadores.</description>
+    </item>
+  </channel>
+</rss>

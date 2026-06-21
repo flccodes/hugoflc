@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Math on Fernando L. Couto</title>
+    <link>https://flccodes.github.io/math/</link>
+    <description>Recent content in Math on Fernando L. Couto</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>fernandolcouto@gmail.com (Fernando L. Couto)</managingEditor>
+    <webMaster>fernandolcouto@gmail.com (Fernando L. Couto)</webMaster>
+    <lastBuildDate>Wed, 17 May 2023 18:57:40 -0300</lastBuildDate>
+    <atom:link href="https://flccodes.github.io/math/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Simples e Funcional</title>
+      <link>https://flccodes.github.io/math/simplesefuncional/</link>
+      <pubDate>Wed, 17 May 2023 18:57:40 -0300</pubDate><author>fernandolcouto@gmail.com (Fernando L. Couto)</author>
+      <guid>https://flccodes.github.io/math/simplesefuncional/</guid>
+      <description>A conhecida &amp;ldquo;Metáfora do Martelo&amp;rdquo; versa sobre saber onde usá-lo. Essa é, de fato, uma habilidade esperada dos profissionais mais experimentados. De forma simples, ouso afirmar que ter conhecimento, i.e., apenas saber algo, não é suficiente. É necessário, pois, discenir sobre seu uso. Isto denota ação e requer orientação, sentido, ou ainda direcionamento.&#xA;Em uma publicação no seu Blog1, o engenheiro Fatih Arslan2, argumenta que &amp;ldquo;usar um único arquivo de configuração init.</description>
+    </item>
+  </channel>
+</rss>

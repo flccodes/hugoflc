@@ -2,51 +2,176 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/gonotes/time/basicgotime01/</loc>
+    <loc>https://flccodes.github.io/curso/modulo1/redes-computadores/diario-estudos/</loc>
+    <lastmod>2026-06-21T19:47:54-03:00</lastmod>
+  </url><url>
+    <loc>https://flccodes.github.io/curso/modulo1/</loc>
+    <lastmod>2026-06-21T19:47:54-03:00</lastmod>
+  </url><url>
+    <loc>https://flccodes.github.io/curso/modulo1/programacao-estruturada/roadmap/</loc>
+    <lastmod>2026-06-21T19:47:54-03:00</lastmod>
+  </url><url>
+    <loc>https://flccodes.github.io/curso/modulo1/programacao-estruturada/unidade-4-loops/</loc>
+    <lastmod>2026-06-21T19:47:54-03:00</lastmod>
+  </url><url>
+    <loc>https://flccodes.github.io/curso/modulo2/</loc>
+  </url><url>
+    <loc>https://flccodes.github.io/curso/modulo1/programacao-estruturada/unidade-7-vetores/</loc>
+    <lastmod>2026-06-21T19:47:54-03:00</lastmod>
+  </url><url>
+    <loc>https://flccodes.github.io/curso/modulo3/</loc>
+  </url><url>
+    <loc>https://flccodes.github.io/curso/optativas/</loc>
+  </url><url>
+    <loc>https://flccodes.github.io/</loc>
+    <lastmod>2026-06-21T19:47:54-03:00</lastmod>
+  </url><url>
+    <loc>https://flccodes.github.io/curso/modulo1/programacao-estruturada/</loc>
+    <lastmod>2026-06-21T19:47:54-03:00</lastmod>
+  </url><url>
+    <loc>https://flccodes.github.io/curso/modulo1/redes-computadores/</loc>
+    <lastmod>2026-06-21T19:47:54-03:00</lastmod>
+  </url><url>
+    <loc>https://flccodes.github.io/curso/</loc>
+    <lastmod>2026-06-21T19:47:54-03:00</lastmod>
+  </url><url>
+    <loc>https://flccodes.github.io/golang/go/</loc>
+    <lastmod>2026-06-16T21:46:00-03:00</lastmod>
+  </url><url>
+    <loc>https://flccodes.github.io/golang/</loc>
+    <lastmod>2026-06-16T21:46:00-03:00</lastmod>
+  </url><url>
+    <loc>https://flccodes.github.io/golang/go/debug/</loc>
+    <lastmod>2026-06-16T21:46:00-03:00</lastmod>
+  </url><url>
+    <loc>https://flccodes.github.io/golang/migracao_controle_consumo_de_agua/</loc>
+    <lastmod>2026-06-14T15:52:00-03:00</lastmod>
+  </url><url>
+    <loc>https://flccodes.github.io/tags/boas-pr%C3%A1ticas/</loc>
+    <lastmod>2026-06-13T20:35:00-03:00</lastmod>
+  </url><url>
+    <loc>https://flccodes.github.io/git/diretrizes-commits/</loc>
+    <lastmod>2026-06-13T20:35:00-03:00</lastmod>
+  </url><url>
+    <loc>https://flccodes.github.io/tags/git/</loc>
+    <lastmod>2026-06-13T20:35:00-03:00</lastmod>
+  </url><url>
+    <loc>https://flccodes.github.io/git/</loc>
+    <lastmod>2026-06-13T20:35:00-03:00</lastmod>
+  </url><url>
+    <loc>https://flccodes.github.io/tags/</loc>
+    <lastmod>2026-06-13T20:35:00-03:00</lastmod>
+  </url><url>
+    <loc>https://flccodes.github.io/tags/workflow/</loc>
+    <lastmod>2026-06-13T20:35:00-03:00</lastmod>
+  </url><url>
+    <loc>https://flccodes.github.io/tags/array/</loc>
+    <lastmod>2026-03-17T11:52:12-03:00</lastmod>
+  </url><url>
+    <loc>https://flccodes.github.io/golang/stdlib/slices/basicgoslices01/</loc>
+    <lastmod>2026-03-17T11:52:12-03:00</lastmod>
+  </url><url>
+    <loc>https://flccodes.github.io/tags/data-structure/</loc>
+    <lastmod>2026-03-17T11:52:12-03:00</lastmod>
+  </url><url>
+    <loc>https://flccodes.github.io/tags/go/</loc>
+    <lastmod>2026-03-17T11:52:12-03:00</lastmod>
+  </url><url>
+    <loc>https://flccodes.github.io/tags/slice/</loc>
+    <lastmod>2026-03-17T11:52:12-03:00</lastmod>
+  </url><url>
+    <loc>https://flccodes.github.io/golang/stdlib/slices/</loc>
+    <lastmod>2026-03-17T11:52:12-03:00</lastmod>
+  </url><url>
+    <loc>https://flccodes.github.io/golang/stdlib/</loc>
+    <lastmod>2026-03-17T11:52:12-03:00</lastmod>
+  </url><url>
+    <loc>https://flccodes.github.io/tags/type/</loc>
+    <lastmod>2026-03-17T11:52:12-03:00</lastmod>
+  </url><url>
+    <loc>https://flccodes.github.io/golang/stdlib/time/basicgotime01/</loc>
     <lastmod>2023-08-14T13:37:35-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://flccodes.github.io/golang/stdlib/time/</loc>
     <lastmod>2023-08-14T13:37:35-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2023-08-14T13:37:35-03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/conhecimento/</loc>
+    <loc>https://flccodes.github.io/tags/conhecimento/</loc>
     <lastmod>2023-05-17T18:57:40-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/kiss/</loc>
+    <loc>https://flccodes.github.io/tags/kiss/</loc>
     <lastmod>2023-05-17T18:57:40-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/math/</loc>
+    <loc>https://flccodes.github.io/tags/math/</loc>
     <lastmod>2023-05-17T18:57:40-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/simplesefuncional/</loc>
+    <loc>https://flccodes.github.io/math/</loc>
     <lastmod>2023-05-17T18:57:40-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://flccodes.github.io/math/simplesefuncional/</loc>
     <lastmod>2023-05-17T18:57:40-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/vim/</loc>
+    <loc>https://flccodes.github.io/tags/vim/</loc>
     <lastmod>2023-05-17T18:57:40-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/conhecimentosuperior/</loc>
+    <loc>https://flccodes.github.io/estudos-biblicos/conhecimentosuperior/</loc>
     <lastmod>2023-05-14T18:46:52-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cv/</loc>
+    <loc>https://flccodes.github.io/estudos-biblicos/</loc>
+    <lastmod>2023-05-14T18:46:52-03:00</lastmod>
+  </url><url>
+    <loc>https://flccodes.github.io/tags/cv/</loc>
     <lastmod>2023-05-14T18:23:34-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cv/</loc>
+    <loc>https://flccodes.github.io/cv/</loc>
     <lastmod>2023-05-14T18:23:34-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cv/cv/</loc>
+    <loc>https://flccodes.github.io/cv/cv/</loc>
     <lastmod>2023-05-14T18:23:34-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/about/</loc>
+    <loc>https://flccodes.github.io/tags/about/</loc>
     <lastmod>2023-05-14T17:59:51-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://flccodes.github.io/about/</loc>
     <lastmod>2023-05-14T17:59:51-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://flccodes.github.io/curso/modulo1/algoritmos/</loc>
+  </url><url>
+    <loc>https://flccodes.github.io/curso/modulo1/ambientacao-ead/</loc>
+  </url><url>
+    <loc>https://flccodes.github.io/curso/modulo1/aplicativos-computacionais/</loc>
+  </url><url>
+    <loc>https://flccodes.github.io/curso/modulo2/banco-dados/</loc>
+  </url><url>
+    <loc>https://flccodes.github.io/categories/</loc>
+  </url><url>
+    <loc>https://flccodes.github.io/curso/modulo2/engenharia-software1/</loc>
+  </url><url>
+    <loc>https://flccodes.github.io/curso/modulo3/engenharia-software2/</loc>
+  </url><url>
+    <loc>https://flccodes.github.io/curso/modulo1/etica-cidadania/</loc>
+  </url><url>
+    <loc>https://flccodes.github.io/golang/stdlib/html/</loc>
+  </url><url>
+    <loc>https://flccodes.github.io/golang/stdlib/html/template/</loc>
+  </url><url>
+    <loc>https://flccodes.github.io/curso/modulo3/ihc/</loc>
+  </url><url>
+    <loc>https://flccodes.github.io/curso/optativas/libras/</loc>
+  </url><url>
+    <loc>https://flccodes.github.io/curso/modulo2/poo1/</loc>
+  </url><url>
+    <loc>https://flccodes.github.io/curso/modulo3/poo2/</loc>
+  </url><url>
+    <loc>https://flccodes.github.io/curso/modulo3/programacao-dispositivos-moveis/</loc>
+  </url><url>
+    <loc>https://flccodes.github.io/curso/modulo2/programacao-web1/</loc>
+  </url><url>
+    <loc>https://flccodes.github.io/curso/modulo2/programacao-web2/</loc>
+  </url><url>
+    <loc>https://flccodes.github.io/curso/modulo3/programacao-web3/</loc>
+  </url><url>
+    <loc>https://flccodes.github.io/curso/modulo3/projeto-interdisciplinar/</loc>
+  </url><url>
+    <loc>https://flccodes.github.io/curso/modulo2/sistemas-operacionais/</loc>
   </url>
 </urlset>

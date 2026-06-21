@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+ 
+
+
+      <title>Guia Master: Recomendações e Práticas de Debug em Go - </title>
+
+  <meta name="description" content="Um guia prático sobre testes unitários, formatação de logs, uso do Delve e tratamento de erros de API para desenvolvedores Go.">
+  <meta name="author" content="Fernando L. Couto"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Fernando L. Couto",
+    
+    "url": "https:\/\/flccodes.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/flccodes.github.io\/"
+  
+  
+  
+  
+}
+</script>
+
+<meta property="og:title" content="Guia Master: Recomendações e Práticas de Debug em Go" />
+<meta property="og:description" content="Um guia prático sobre testes unitários, formatação de logs, uso do Delve e tratamento de erros de API para desenvolvedores Go.">
+<meta property="og:image" content="https://flccodes.github.io/img/avatar-icon.jpg" />
+<meta property="og:url" content="https://flccodes.github.io/golang/go/debug/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Fernando L. Couto" />
+
+  <meta name="twitter:title" content="Guia Master: Recomendações e Práticas de Debug em Go" />
+  <meta name="twitter:description" content="Um guia prático sobre testes unitários, formatação de logs, uso do Delve e tratamento de erros de API para desenvolvedores Go.">
+  <meta name="twitter:image" content="https://flccodes.github.io/img/avatar-icon.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link href='https://flccodes.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.131.0">
+  <link rel="alternate" href="https://flccodes.github.io/index.xml" type="application/rss+xml" title="Fernando L. Couto"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://flccodes.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://flccodes.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://flccodes.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+  
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://flccodes.github.io/">Fernando L. Couto</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Posts" href="/posts/">Posts</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Curso (TDS)" href="/curso/">Curso (TDS)</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Golang" href="/golang/">Golang</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Estudos Bíblicos" href="/estudos-biblicos/">Estudos Bíblicos</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Math" href="/math/">Math</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Git" href="/git/">Git</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Thoughs</a>
+              <div class="navlinks-children">
+                
+                  <a href="/post/2017-03-07-bigimg-sample">Big Image Sample</a>
+                
+                  <a href="/post/2017-03-05-math-sample">Math Sample</a>
+                
+                  <a href="/post/2016-03-08-code-sample">Code Sample</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags/">Tags</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="CV" href="/cv/">CV</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Fernando L. Couto" href="https://flccodes.github.io/">
+            <img class="avatar-img" src="https://flccodes.github.io/img/avatar-icon.jpg" alt="Fernando L. Couto" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="golang-heading">
+              
+                <h2>Guia Master: Recomendações e Práticas de Debug em Go</h2>
+              
+              
+                <hr class="small">
+              
+              
+                
+                  <h3 class="golang-subheading">Estratégias eficazes para diagnosticar e corrigir problemas em aplicações Go</h3>
+                
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+  <div class="container" role="main">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        
+          <div class="well">
+            <h1 id="guia-master-depurando-em-go-debug">Guia Master: Depurando em Go (Debug)</h1>
+<p>Depurar código em Go de forma eficiente requer a combinação de boas práticas estruturais da linguagem e o conhecimento das ferramentas corretas. Abaixo estão as recomendações essenciais de depuração, abordando desde testes automatizados até o uso de debuggers interativos.</p>
+<hr>
+<h2 id="1-o-poder-dos-testes-unitários-go-test-como-ferramenta-de-debug">1. O Poder dos Testes Unitários (<code>go test</code>) como Ferramenta de Debug</h2>
+<p>Em Go, a melhor forma de depurar um comportamento estranho não é rodar o servidor web inteiro e tentar simular a ação no navegador. O caminho mais rápido e eficiente é isolar a lógica em um teste automatizado.</p>
+<ul>
+<li><strong>Isolar o teste:</strong> Ao notar um erro em uma função de cálculo ou manipulação de dados, abra o arquivo de testes correspondente (ex: <code>calculator_test.go</code>), adicione uma massa de dados que reproduza o problema e execute apenas aquele teste específico:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">go <span class="nb">test</span> -v -run TestCalculateNextReading ./parser/...
+</span></span></code></pre></div></li>
+<li><strong>Debug Visual nos Testes:</strong> Se o resultado for diferente do esperado, enriqueça a saída usando a função <code>t.Logf()</code> do pacote <code>testing</code>. Ela é ideal pois só é impressa no terminal se o teste falhar ou se você passar explicitamente a flag <code>-v</code>.</li>
+</ul>
+<hr>
+<h2 id="2-print-debugging-inteligente-v-e-v">2. Print Debugging Inteligente (<code>%+v</code> e <code>%#v</code>)</h2>
+<p>Quando precisar imprimir dados no console para inspecionar structs ou variáveis complexas:</p>
+<ul>
+<li><strong>Use <code>%+v</code></strong>: Imprime a estrutura mostrando o nome de cada campo juntamente com seu valor.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">log</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;Leitura recebida: %+v&#34;</span><span class="p">,</span> <span class="nx">reading</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Saída: Leitura recebida: {Timestamp:2026-06-16 08:00:00 MeterValue:473.02}
+</span></span></span></code></pre></div></li>
+<li><strong>Use <code>%#v</code> (Ainda melhor)</strong>: Imprime o valor em formato de sintaxe Go literal, exibindo o tipo exato e ponteiros. É fantástico para distinguir se uma string vazia é de fato <code>&quot;&quot;</code> ou se um campo está como <code>nil</code>.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">log</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;Configuração carregada: %#v&#34;</span><span class="p">,</span> <span class="nx">config</span><span class="p">)</span>
+</span></span></code></pre></div></li>
+</ul>
+<hr>
+<h2 id="3-utilizando-o-delve-dlv--o-debugger-oficial-do-go">3. Utilizando o Delve (<code>dlv</code>) — O Debugger Oficial do Go</h2>
+<p>O <strong>Delve</strong> é a ferramenta padrão do ecossistema Go para depurar o código linha por linha diretamente pela linha de comando ou integrado a IDEs.</p>
+<ul>
+<li><strong>Depurar os testes:</strong> Você pode inicializar o depurador diretamente no contexto dos seus testes unitários:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dlv <span class="nb">test</span> ./parser
+</span></span></code></pre></div></li>
+<li><strong>Depurar o executável principal:</strong> Para iniciar o depurador na aplicação web (a partir do ponto de entrada <code>main.go</code>):
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dlv debug ./cmd
+</span></span></code></pre></div></li>
+<li><strong>Comandos principais do Delve no terminal:</strong>
+<ul>
+<li><code>break main.go:195</code> (ou <code>b</code>): Define um ponto de parada (breakpoint) na linha 195.</li>
+<li><code>continue</code> (ou <code>c</code>): Executa o código até atingir o próximo breakpoint.</li>
+<li><code>next</code> (ou <code>n</code>): Avança para a próxima linha no mesmo escopo/arquivo.</li>
+<li><code>step</code> (ou <code>s</code>): Entra para dentro de uma função que está sendo chamada na linha atual.</li>
+<li><code>print &lt;variavel&gt;</code> (ou <code>p</code>): Exibe o valor de uma variável em tempo de execução.</li>
+<li><code>locals</code>: Lista todas as variáveis locais e seus valores no escopo atual.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="4-validação-de-configurações-e-apis-externas">4. Validação de Configurações e APIs Externas</h2>
+<p>Muitos problemas em produção decorrem de variáveis de ambiente mal configuradas ou payloads inesperados de APIs externas.</p>
+<ul>
+<li><strong>Sanitização de logs de config:</strong> Implemente logs que validem a existência e o tamanho das variáveis carregadas em arquivos <code>.env</code> na inicialização, mas evite expor segredos.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">GeminiAPIKey</span><span class="p">)</span> <span class="p">&gt;</span> <span class="mi">6</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">log</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;Gemini API Key carregada com sucesso (sufixo: ...%s)&#34;</span><span class="p">,</span> <span class="nx">config</span><span class="p">.</span><span class="nx">GeminiAPIKey</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">GeminiAPIKey</span><span class="p">)</span><span class="o">-</span><span class="mi">4</span><span class="p">:])</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">log</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;AVISO: Gemini API Key ausente ou muito curta!&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div></li>
+<li><strong>Inspeção detalhada de erros de API:</strong> Clientes HTTP e bibliotecas oficiais (como as do Google API) retornam objetos de erros detalhados. Evite engolir ou simplificar o erro. Faça o log completo de <code>err.Error()</code> para entender se a falha é de rede, de quota ou de permissão de acesso (<code>403 Forbidden</code>).</li>
+</ul>
+
+          </div>
+        
+
+        
+
+        <div class="posts-list">
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="/golang/go/debug/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="https://www.flcoutos.com.br">Fernando L. Couto</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2026
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://flccodes.github.io/">Fernando L. Couto</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://flccodes.github.io/js/main.js"></script>
+<script src="https://flccodes.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://flccodes.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

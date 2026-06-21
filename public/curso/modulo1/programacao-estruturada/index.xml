@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programação Estruturada on Fernando L. Couto</title>
+    <link>https://flccodes.github.io/curso/modulo1/programacao-estruturada/</link>
+    <description>Recent content in Programação Estruturada on Fernando L. Couto</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>fernandolcouto@gmail.com (Fernando L. Couto)</managingEditor>
+    <webMaster>fernandolcouto@gmail.com (Fernando L. Couto)</webMaster>
+    <lastBuildDate>Sun, 21 Jun 2026 19:47:54 -0300</lastBuildDate>
+    <atom:link href="https://flccodes.github.io/curso/modulo1/programacao-estruturada/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Roadmap e Syllabus - Programação Estruturada</title>
+      <link>https://flccodes.github.io/curso/modulo1/programacao-estruturada/roadmap/</link>
+      <pubDate>Sun, 21 Jun 2026 19:47:54 -0300</pubDate><author>fernandolcouto@gmail.com (Fernando L. Couto)</author>
+      <guid>https://flccodes.github.io/curso/modulo1/programacao-estruturada/roadmap/</guid>
+      <description>Este repositório contém anotações de estudo, resoluções de questionários, transcrições de videoaulas e reflexões sobre a disciplina de Programação Estruturada (IFSULDEMINAS).&#xA;🗺️ Syllabus Roadmap &amp;amp; Trilha de Aprendizagem Abaixo está o mapeamento completo do módulo, conectando os materiais de leitura oficial (Apostila de Programação Estruturada (PDF)), os questionários de avaliação e as transcrições das videoaulas correspondentes.&#xA;📚 Unidades 1 e 2: Introdução à Linguagem C &amp;amp; Declaração de Variáveis e Operadores Material de Leitura: Apostila (PDF) (Páginas 5 a 20 e Anexo 1 na pág 36).</description>
+    </item>
+    <item>
+      <title>Unidade 4: Estruturas de Repetição</title>
+      <link>https://flccodes.github.io/curso/modulo1/programacao-estruturada/unidade-4-loops/</link>
+      <pubDate>Sun, 21 Jun 2026 19:47:54 -0300</pubDate><author>fernandolcouto@gmail.com (Fernando L. Couto)</author>
+      <guid>https://flccodes.github.io/curso/modulo1/programacao-estruturada/unidade-4-loops/</guid>
+      <description>Esta unidade cobre o funcionamento das três estruturas básicas de iteração da Linguagem C: while, do-while e for.&#xA;As anotações abaixo foram compiladas a partir da resolução e correção do Questionário 4 do IFSULDEMINAS (que obteve nota máxima de 10,0/10,0, arquivo correspondente: questionario4.pdf).&#xA;📌 Teoria Básica Na Linguagem C padrão, existem exatamente três estruturas oficiais de repetição:&#xA;while: Avalia a condição no início do loop. Se for falsa logo de cara, o loop não roda nenhuma vez.</description>
+    </item>
+    <item>
+      <title>Unidade 7: Vetores (Arrays)</title>
+      <link>https://flccodes.github.io/curso/modulo1/programacao-estruturada/unidade-7-vetores/</link>
+      <pubDate>Sun, 21 Jun 2026 19:47:54 -0300</pubDate><author>fernandolcouto@gmail.com (Fernando L. Couto)</author>
+      <guid>https://flccodes.github.io/curso/modulo1/programacao-estruturada/unidade-7-vetores/</guid>
+      <description>Esta unidade cobre a estrutura de dados homogênea mais básica na Linguagem C: os Vetores (Arrays).&#xA;As anotações abaixo foram compiladas com base no Questionário 5 (Unidades 5, 6 e 7) (que obteve nota máxima de 50,0/50,0 - 100%, arquivo correspondente: Questionário 5 (PDF)).&#xA;📌 Teoria Essencial sobre Vetores em C Definição: Um vetor é uma estrutura de dados homogênea e estática: Homogênea: Todos os elementos armazenados são obrigatoriamente do mesmo tipo (por exemplo, todos são int ou todos são float).</description>
+    </item>
+  </channel>
+</rss>

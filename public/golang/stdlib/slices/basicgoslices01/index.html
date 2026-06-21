@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+ 
+
+
+      <title>Basic about Go Slices - </title>
+
+  <meta name="description" content="An Introduction to Slices This discussion approaches ARRAY, SLICE, Slice internals, Growing slices and A possible “gotcha” from the source available in: Go Slices: usage and internals
+ARRAY First of all to understand SLICEit&rsquo;s necessary understand ARRAYin Go, since the slice type is an abstraction that comes from Go&rsquo;s array type. Thus the ARRAY [5]int has the type [5]int which represents an ARRAYof ten integers elements, where the array’s size is fixed and its length is part of its type.">
+  <meta name="author" content="Fernando L. Couto"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Fernando L. Couto",
+    
+    "url": "https:\/\/flccodes.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/flccodes.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/flccodes.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/flccodes.github.io\/golang\/stdlib\/slices\/basicgoslices01\/",
+          "name": "Basic about go slices"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Fernando L. Couto"
+  },
+  "headline": "Basic about Go Slices",
+  "description" : "An Introduction to Slices This discussion approaches ARRAY, SLICE, Slice internals, Growing slices and A possible “gotcha” from the source available in: Go Slices: usage and internals\nARRAY First of all to understand SLICEit\u0026rsquo;s necessary understand ARRAYin Go, since the slice type is an abstraction that comes from Go\u0026rsquo;s array type. Thus the ARRAY [5]int has the type [5]int which represents an ARRAYof ten integers elements, where the array’s size is fixed and its length is part of its type.",
+  "inLanguage" : "en",
+  "wordCount":  469 ,
+  "datePublished" : "2026-03-17T11:52:12",
+  "dateModified" : "2026-03-17T11:52:12",
+  "image" : "https:\/\/flccodes.github.io\/img\/avatar-icon.jpg",
+  "keywords" : [ "Go, Array, Slice, Type, Data Structure" ],
+  "mainEntityOfPage" : "https:\/\/flccodes.github.io\/golang\/stdlib\/slices\/basicgoslices01\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/flccodes.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/flccodes.github.io\/img\/avatar-icon.jpg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Basic about Go Slices" />
+<meta property="og:description" content="An Introduction to Slices This discussion approaches ARRAY, SLICE, Slice internals, Growing slices and A possible “gotcha” from the source available in: Go Slices: usage and internals
+ARRAY First of all to understand SLICEit&rsquo;s necessary understand ARRAYin Go, since the slice type is an abstraction that comes from Go&rsquo;s array type. Thus the ARRAY [5]int has the type [5]int which represents an ARRAYof ten integers elements, where the array’s size is fixed and its length is part of its type.">
+<meta property="og:image" content="https://flccodes.github.io/img/avatar-icon.jpg" />
+<meta property="og:url" content="https://flccodes.github.io/golang/stdlib/slices/basicgoslices01/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Fernando L. Couto" />
+
+  <meta name="twitter:title" content="Basic about Go Slices" />
+  <meta name="twitter:description" content="An Introduction to Slices This discussion approaches ARRAY, SLICE, Slice internals, Growing slices and A possible “gotcha” from the source available in: Go Slices: usage and internals
+ARRAY First of …">
+  <meta name="twitter:image" content="https://flccodes.github.io/img/avatar-icon.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link href='https://flccodes.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.131.0">
+  <link rel="alternate" href="https://flccodes.github.io/index.xml" type="application/rss+xml" title="Fernando L. Couto"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://flccodes.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://flccodes.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://flccodes.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+  
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://flccodes.github.io/">Fernando L. Couto</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Posts" href="/posts/">Posts</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Curso (TDS)" href="/curso/">Curso (TDS)</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Golang" href="/golang/">Golang</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Estudos Bíblicos" href="/estudos-biblicos/">Estudos Bíblicos</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Math" href="/math/">Math</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Git" href="/git/">Git</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Thoughs</a>
+              <div class="navlinks-children">
+                
+                  <a href="/post/2017-03-07-bigimg-sample">Big Image Sample</a>
+                
+                  <a href="/post/2017-03-05-math-sample">Math Sample</a>
+                
+                  <a href="/post/2016-03-08-code-sample">Code Sample</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags/">Tags</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="CV" href="/cv/">CV</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Fernando L. Couto" href="https://flccodes.github.io/">
+            <img class="avatar-img" src="https://flccodes.github.io/img/avatar-icon.jpg" alt="Fernando L. Couto" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="golang-heading">
+              
+                <h2>Basic about Go Slices</h2>
+              
+              
+                <hr class="small">
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <h3 id="an-introduction-to-slices">An Introduction to Slices</h3>
+<p>This discussion approaches <code>ARRAY</code>, <code>SLICE</code>, <code>Slice internals</code>, <code>Growing slices</code> and <code>A possible “gotcha”</code> from the source available in: <a href="https://go.dev/blog/slices-intro">Go Slices: usage and internals</a></p>
+<h4 id="array">ARRAY</h4>
+<p>First of all to understand <code>SLICE</code>it&rsquo;s necessary understand <code>ARRAY</code>in Go, since the slice type is an abstraction that comes from Go&rsquo;s array type. Thus the <code>ARRAY</code> <code>[5]int</code> has the type <code>[5]int</code> which represents an <code>ARRAY</code>of ten integers elements, where the array’s size is fixed and its length is part of its type.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// Create a variable of the type [5]int
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">array1</span> <span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="kt">int</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">array1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;\nType: %T Len: %d\n&#34;</span><span class="p">,</span> <span class="nx">array1</span><span class="p">,</span> <span class="nx">array1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">v</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">array1</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;Index: %d Value: %d\n&#34;</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">v</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span></code></pre></div><p>Results:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ go run slices1.go
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> 0<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Type: <span class="o">[</span>5<span class="o">]</span>int Len: <span class="o">[</span><span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> 0<span class="o">]</span>
+</span></span><span class="line"><span class="cl">Index: <span class="m">0</span> Value: <span class="m">0</span>
+</span></span><span class="line"><span class="cl">Index: <span class="m">1</span> Value: <span class="m">0</span>
+</span></span><span class="line"><span class="cl">Index: <span class="m">2</span> Value: <span class="m">0</span>
+</span></span><span class="line"><span class="cl">Index: <span class="m">3</span> Value: <span class="m">0</span>
+</span></span><span class="line"><span class="cl">Index: <span class="m">4</span> Value: <span class="m">0</span>
+</span></span></code></pre></div><p>For ilustration:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// Create a variable of the type [3]int
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">array2</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="kt">int</span>
+</span></span></code></pre></div><p>The <code>array2</code>has <code>Type: [3]int Len: [0 0 0]</code>. As Go&rsquo;s arrays are values, the difference between <code>array1</code> and <code>array2</code> is their <em>type</em>. Further Go&rsquo;s arrays do not have a pointer to the first array element, like <code>C Language</code>, because in <code>Go Language</code> an array variable denotes the entire array. Finally it is import highlighting that always assign or pass around an array value will be make a copy of its elements.</p>
+<p>The code line <code>fmt.Printf(&quot;Array1 address: %p, Array2 address: %p\n&quot;, &amp;array1, &amp;array2)</code> shows the two variables memory addresses:</p>
+<p><code>Array1 address: 0x10a360ac6120</code>
+<code>Array2 address: 0x10a360ac2150</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// Function getArray1 returns a pointer to array1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">func</span> <span class="nf">getArray1</span><span class="p">(</span><span class="nx">a</span> <span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="kt">int</span><span class="p">)</span> <span class="o">*</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="kt">int</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">ptr_a</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="nx">a</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="nx">ptr_a</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;First - Array1 address within a function: %p\n&#34;</span><span class="p">,</span> <span class="nf">getArray1</span><span class="p">(</span><span class="nx">array1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Output: First - Array1 address within a function: 0x302165118000
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;Second - Array1 address within a function: %p\n&#34;</span><span class="p">,</span> <span class="nf">getArray1</span><span class="p">(</span><span class="nx">array1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Output: Second - Array1 address within a function: 0x302165118030
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// The code line below shows the memory address of the pointer to array1 created within a function
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;Array1 address within a function: %p\n&#34;</span><span class="p">,</span> <span class="nf">getArray1</span><span class="p">(</span><span class="nx">array1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Assigning the array2 to a variable
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="nx">ptr_array2</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="nx">array2</span>
+</span></span><span class="line"><span class="cl"><span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;\nType: %T Len: %d ptr_Array2 address: %p\n&#34;</span><span class="p">,</span> <span class="nx">ptr_array2</span><span class="p">,</span> <span class="nx">ptr_array2</span><span class="p">,</span> <span class="nx">ptr_array2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Output: Type: *[3]int Len: &amp;[0 0 0] ptr_Array2 address: 0x30216504e150
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">array2Var</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="kt">int</span>
+</span></span><span class="line"><span class="cl"><span class="nx">array2Var</span> <span class="p">=</span> <span class="nx">array2</span>
+</span></span><span class="line"><span class="cl"><span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;\nArray2Var - Type: %T Len: %d Array2Var address: %p\n&#34;</span><span class="p">,</span> <span class="nx">array2Var</span><span class="p">,</span> <span class="nx">array2Var</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">array2Var</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Output: Array2Var - Type: [3]int Len: [0 0 0] Array2Var address: 0x30216511a018
+</span></span></span></code></pre></div><p>As showed the memory addreses of the variables <code>array1</code> and <code>array2</code> changed after the call within a function and assigned to other variable.</p>
+<h4 id="slice">SLICE</h4>
+<h4 id="slice-internals">Slice Internals</h4>
+<h4 id="growing-slices-the-copy-and-append-functions">Growing slices (the copy and append functions)</h4>
+<h4 id="a-possible-gotcha">A possible “gotcha</h4>
+<p>As aditional sources the article points the further reading: <a href="https://go.dev/doc/effective_go.html">Effective Go</a> that  contains an in-depth treatment of <a href="https://go.dev/doc/effective_go.html#slices">slices</a> and <a href="https://go.dev/doc/effective_go.html#arrays">arrays</a>, and the Go <a href="https://go.dev/doc/go_spec.html">language specification</a> defines <a href="https://go.dev/doc/go_spec.html#Slice_types">slices</a> and their <a href="https://go.dev/doc/go_spec.html#Length_and_capacity">associated</a> <a href="https://go.dev/doc/go_spec.html#Making_slices_maps_and_channels">helper</a> <a href="https://go.dev/doc/go_spec.html#Appending_and_copying_slices">functions.</a></p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://flccodes.github.io//tags/go/">Go</a>&nbsp;
+            
+              <a href="https://flccodes.github.io//tags/array/">Array</a>&nbsp;
+            
+              <a href="https://flccodes.github.io//tags/slice/">Slice</a>&nbsp;
+            
+              <a href="https://flccodes.github.io//tags/type/">Type</a>&nbsp;
+            
+              <a href="https://flccodes.github.io//tags/data-structure/">Data Structure</a>&nbsp;
+            
+          </div>
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2fflccodes.github.io%2fgolang%2fstdlib%2fslices%2fbasicgoslices01%2f&amp;text=Basic%20about%20Go%20Slices&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fflccodes.github.io%2fgolang%2fstdlib%2fslices%2fbasicgoslices01%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2fflccodes.github.io%2fgolang%2fstdlib%2fslices%2fbasicgoslices01%2f&amp;title=Basic%20about%20Go%20Slices" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fflccodes.github.io%2fgolang%2fstdlib%2fslices%2fbasicgoslices01%2f&amp;title=Basic%20about%20Go%20Slices" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fflccodes.github.io%2fgolang%2fstdlib%2fslices%2fbasicgoslices01%2f&amp;title=Basic%20about%20Go%20Slices" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fflccodes.github.io%2fgolang%2fstdlib%2fslices%2fbasicgoslices01%2f&amp;description=Basic%20about%20Go%20Slices" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="https://www.flcoutos.com.br">Fernando L. Couto</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2026
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://flccodes.github.io/">Fernando L. Couto</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://flccodes.github.io/js/main.js"></script>
+<script src="https://flccodes.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://flccodes.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

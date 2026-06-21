@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Golang on Fernando L. Couto</title>
+    <link>https://flccodes.github.io/golang/</link>
+    <description>Recent content in Golang on Fernando L. Couto</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>fernandolcouto@gmail.com (Fernando L. Couto)</managingEditor>
+    <webMaster>fernandolcouto@gmail.com (Fernando L. Couto)</webMaster>
+    <lastBuildDate>Sun, 14 Jun 2026 15:52:00 -0300</lastBuildDate>
+    <atom:link href="https://flccodes.github.io/golang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Migração do Controle de Consumo de Água (CCA)</title>
+      <link>https://flccodes.github.io/golang/migracao_controle_consumo_de_agua/</link>
+      <pubDate>Sun, 14 Jun 2026 15:52:00 -0300</pubDate><author>fernandolcouto@gmail.com (Fernando L. Couto)</author>
+      <guid>https://flccodes.github.io/golang/migracao_controle_consumo_de_agua/</guid>
+      <description>Diário de Aprendizado Go: Migração do Controle de Consumo de Água (CCA) Este documento registra a evolução e os bastidores técnicos da migração do sistema COPASA Monitor para a sua nova etapa evolutiva: CCA (Controle de Consumo de Água). Aqui detalhamos a arquitetura do projeto em Go, as discussões sobre persistência e infraestrutura doméstica gratuita, e o refatoramento matemático das fórmulas.&#xA;📸 Retrato 1: Como Nasceu a Ideia (COPASA Monitor) O projeto original nasceu com o objetivo prático de automatizar a coleta de dados de consumo de água residencial.</description>
+    </item>
+  </channel>
+</rss>

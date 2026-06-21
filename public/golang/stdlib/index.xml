@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Standard Library (StdLib) on Fernando L. Couto</title>
+    <link>https://flccodes.github.io/golang/stdlib/</link>
+    <description>Recent content in Standard Library (StdLib) on Fernando L. Couto</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>fernandolcouto@gmail.com (Fernando L. Couto)</managingEditor>
+    <webMaster>fernandolcouto@gmail.com (Fernando L. Couto)</webMaster>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="https://flccodes.github.io/golang/stdlib/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

@@ -2,47 +2,96 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fernando L. Couto</title>
-    <link>http://localhost:1313/</link>
+    <link>https://flccodes.github.io/</link>
     <description>Recent content on Fernando L. Couto</description>
     <generator>Hugo</generator>
     <language>en</language>
     <managingEditor>fernandolcouto@gmail.com (Fernando L. Couto)</managingEditor>
     <webMaster>fernandolcouto@gmail.com (Fernando L. Couto)</webMaster>
-    <lastBuildDate>Mon, 14 Aug 2023 13:37:35 -0300</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Jun 2026 19:47:54 -0300</lastBuildDate>
+    <atom:link href="https://flccodes.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Diário de Estudos - Redes de Computadores</title>
+      <link>https://flccodes.github.io/curso/modulo1/redes-computadores/diario-estudos/</link>
+      <pubDate>Sun, 21 Jun 2026 19:47:54 -0300</pubDate><author>fernandolcouto@gmail.com (Fernando L. Couto)</author>
+      <guid>https://flccodes.github.io/curso/modulo1/redes-computadores/diario-estudos/</guid>
+      <description>Curso Técnico em Desenvolvimento de Sistemas — IFSULDEMINAS Aluno: Hugo (Espaço de Trabalho: hugoflc)&#xA;🛠️ Trilha Tecnológica: Automação de Transcrições Nesta seção, registramos o progresso no desenvolvimento do script para extração de transcrições do YouTube.&#xA;O Script: extract_transcripts.py Desenvolvido em Python para extrair de forma assíncrona as transcrições das videoaulas e estruturar o material para estudo no NotebookLM.&#xA;[!TIP] Boas Práticas de Engenharia de Software:&#xA;Ambiente Virtual Isolado (.venv): Foi criado um ambiente virtual independente para a disciplina de Redes de Computadores.</description>
+    </item>
+    <item>
+      <title>Roadmap e Syllabus - Programação Estruturada</title>
+      <link>https://flccodes.github.io/curso/modulo1/programacao-estruturada/roadmap/</link>
+      <pubDate>Sun, 21 Jun 2026 19:47:54 -0300</pubDate><author>fernandolcouto@gmail.com (Fernando L. Couto)</author>
+      <guid>https://flccodes.github.io/curso/modulo1/programacao-estruturada/roadmap/</guid>
+      <description>Este repositório contém anotações de estudo, resoluções de questionários, transcrições de videoaulas e reflexões sobre a disciplina de Programação Estruturada (IFSULDEMINAS).&#xA;🗺️ Syllabus Roadmap &amp;amp; Trilha de Aprendizagem Abaixo está o mapeamento completo do módulo, conectando os materiais de leitura oficial (Apostila de Programação Estruturada (PDF)), os questionários de avaliação e as transcrições das videoaulas correspondentes.&#xA;📚 Unidades 1 e 2: Introdução à Linguagem C &amp;amp; Declaração de Variáveis e Operadores Material de Leitura: Apostila (PDF) (Páginas 5 a 20 e Anexo 1 na pág 36).</description>
+    </item>
+    <item>
+      <title>Unidade 4: Estruturas de Repetição</title>
+      <link>https://flccodes.github.io/curso/modulo1/programacao-estruturada/unidade-4-loops/</link>
+      <pubDate>Sun, 21 Jun 2026 19:47:54 -0300</pubDate><author>fernandolcouto@gmail.com (Fernando L. Couto)</author>
+      <guid>https://flccodes.github.io/curso/modulo1/programacao-estruturada/unidade-4-loops/</guid>
+      <description>Esta unidade cobre o funcionamento das três estruturas básicas de iteração da Linguagem C: while, do-while e for.&#xA;As anotações abaixo foram compiladas a partir da resolução e correção do Questionário 4 do IFSULDEMINAS (que obteve nota máxima de 10,0/10,0, arquivo correspondente: questionario4.pdf).&#xA;📌 Teoria Básica Na Linguagem C padrão, existem exatamente três estruturas oficiais de repetição:&#xA;while: Avalia a condição no início do loop. Se for falsa logo de cara, o loop não roda nenhuma vez.</description>
+    </item>
+    <item>
+      <title>Unidade 7: Vetores (Arrays)</title>
+      <link>https://flccodes.github.io/curso/modulo1/programacao-estruturada/unidade-7-vetores/</link>
+      <pubDate>Sun, 21 Jun 2026 19:47:54 -0300</pubDate><author>fernandolcouto@gmail.com (Fernando L. Couto)</author>
+      <guid>https://flccodes.github.io/curso/modulo1/programacao-estruturada/unidade-7-vetores/</guid>
+      <description>Esta unidade cobre a estrutura de dados homogênea mais básica na Linguagem C: os Vetores (Arrays).&#xA;As anotações abaixo foram compiladas com base no Questionário 5 (Unidades 5, 6 e 7) (que obteve nota máxima de 50,0/50,0 - 100%, arquivo correspondente: Questionário 5 (PDF)).&#xA;📌 Teoria Essencial sobre Vetores em C Definição: Um vetor é uma estrutura de dados homogênea e estática: Homogênea: Todos os elementos armazenados são obrigatoriamente do mesmo tipo (por exemplo, todos são int ou todos são float).</description>
+    </item>
+    <item>
+      <title>Migração do Controle de Consumo de Água (CCA)</title>
+      <link>https://flccodes.github.io/golang/migracao_controle_consumo_de_agua/</link>
+      <pubDate>Sun, 14 Jun 2026 15:52:00 -0300</pubDate><author>fernandolcouto@gmail.com (Fernando L. Couto)</author>
+      <guid>https://flccodes.github.io/golang/migracao_controle_consumo_de_agua/</guid>
+      <description>Diário de Aprendizado Go: Migração do Controle de Consumo de Água (CCA) Este documento registra a evolução e os bastidores técnicos da migração do sistema COPASA Monitor para a sua nova etapa evolutiva: CCA (Controle de Consumo de Água). Aqui detalhamos a arquitetura do projeto em Go, as discussões sobre persistência e infraestrutura doméstica gratuita, e o refatoramento matemático das fórmulas.&#xA;📸 Retrato 1: Como Nasceu a Ideia (COPASA Monitor) O projeto original nasceu com o objetivo prático de automatizar a coleta de dados de consumo de água residencial.</description>
+    </item>
+    <item>
+      <title>Diretrizes de Commits e Fluxo Git</title>
+      <link>https://flccodes.github.io/git/diretrizes-commits/</link>
+      <pubDate>Sat, 13 Jun 2026 20:35:00 -0300</pubDate><author>fernandolcouto@gmail.com (Fernando L. Couto)</author>
+      <guid>https://flccodes.github.io/git/diretrizes-commits/</guid>
+      <description>Diretrizes para Commits Atômicos e Fluxo de Trabalho Esta página serve como diretriz para a organização e versionamento deste repositório de aprendizado. Ela resume a nossa conversa sobre a melhor forma de lidar com o Git no dia a dia.&#xA;1. O que é um &amp;ldquo;Commit Atômico&amp;rdquo; Um commit é considerado atômico quando representa uma única unidade lógica de trabalho completa.&#xA;Evite commits fragmentados: O Git não rastreia pastas vazias (apenas arquivos).</description>
+    </item>
+    <item>
+      <title>Basic about Go Slices</title>
+      <link>https://flccodes.github.io/golang/stdlib/slices/basicgoslices01/</link>
+      <pubDate>Tue, 17 Mar 2026 11:52:12 -0300</pubDate><author>fernandolcouto@gmail.com (Fernando L. Couto)</author>
+      <guid>https://flccodes.github.io/golang/stdlib/slices/basicgoslices01/</guid>
+      <description>An Introduction to Slices This discussion approaches ARRAY, SLICE, Slice internals, Growing slices and A possible “gotcha” from the source available in: Go Slices: usage and internals&#xA;ARRAY First of all to understand SLICEit&amp;rsquo;s necessary understand ARRAYin Go, since the slice type is an abstraction that comes from Go&amp;rsquo;s array type. Thus the ARRAY [5]int has the type [5]int which represents an ARRAYof ten integers elements, where the array’s size is fixed and its length is part of its type.</description>
+    </item>
     <item>
       <title>Basic about Go Time</title>
-      <link>http://localhost:1313/posts/gonotes/time/basicgotime01/</link>
+      <link>https://flccodes.github.io/golang/stdlib/time/basicgotime01/</link>
       <pubDate>Mon, 14 Aug 2023 13:37:35 -0300</pubDate><author>fernandolcouto@gmail.com (Fernando L. Couto)</author>
-      <guid>http://localhost:1313/posts/gonotes/time/basicgotime01/</guid>
+      <guid>https://flccodes.github.io/golang/stdlib/time/basicgotime01/</guid>
       <description>Estrutura do Pacote O pacote Time contem um poderoso ferramental que permite ao utilizador de Go manipular/exibir1 dados sobre o tempo.&#xA;Alguns recursos do pacote:&#xA;Funções:&#xA;After() Sleep() Tick() Types:&#xA;Duration Location Month ParseError Ticker Time Timer Weekday Além das três funções elencadas, cada Type possui seu conjunto de Métodos que entregam versatilidade no manuseio de operações envolvendo tempo. Esses recursos estão distribuidos nos arquivos fonte:&#xA;format.go format_rfc3339.go sleep.go sys_unix.go tick.</description>
     </item>
     <item>
       <title>Simples e Funcional</title>
-      <link>http://localhost:1313/posts/simplesefuncional/</link>
+      <link>https://flccodes.github.io/math/simplesefuncional/</link>
       <pubDate>Wed, 17 May 2023 18:57:40 -0300</pubDate><author>fernandolcouto@gmail.com (Fernando L. Couto)</author>
-      <guid>http://localhost:1313/posts/simplesefuncional/</guid>
+      <guid>https://flccodes.github.io/math/simplesefuncional/</guid>
       <description>A conhecida &amp;ldquo;Metáfora do Martelo&amp;rdquo; versa sobre saber onde usá-lo. Essa é, de fato, uma habilidade esperada dos profissionais mais experimentados. De forma simples, ouso afirmar que ter conhecimento, i.e., apenas saber algo, não é suficiente. É necessário, pois, discenir sobre seu uso. Isto denota ação e requer orientação, sentido, ou ainda direcionamento.&#xA;Em uma publicação no seu Blog1, o engenheiro Fatih Arslan2, argumenta que &amp;ldquo;usar um único arquivo de configuração init.</description>
     </item>
     <item>
       <title>Conhecimento Superior</title>
-      <link>http://localhost:1313/posts/conhecimentosuperior/</link>
+      <link>https://flccodes.github.io/estudos-biblicos/conhecimentosuperior/</link>
       <pubDate>Sun, 14 May 2023 18:46:52 -0300</pubDate><author>fernandolcouto@gmail.com (Fernando L. Couto)</author>
-      <guid>http://localhost:1313/posts/conhecimentosuperior/</guid>
+      <guid>https://flccodes.github.io/estudos-biblicos/conhecimentosuperior/</guid>
       <description>(&amp;hellip;) Na verdade, como se diz, “todos nós temos conhecimento.” Porém esse tipo de conhecimento enche a pessoa de orgulho; mas o amor nos faz progredir na fé. A pessoa que pensa que sabe alguma coisa ainda não tem a sabedoria que precisa. Mas quem ama a Deus é conhecido por ele. (1 Corintios 8:1 - 3)&#xA;O &amp;ldquo;tipo de conhecimento [que] enche a pessoa de orgulho&amp;rdquo; é o que viola o que é santo, cheio de contradições, e, portanto, apropriadamente entendido como &amp;ldquo;falso conhecimento&amp;rdquo; (1 Timóteo 6:20).</description>
     </item>
     <item>
       <title>Fernando Luis Couto da Silva</title>
-      <link>http://localhost:1313/cv/cv/</link>
+      <link>https://flccodes.github.io/cv/cv/</link>
       <pubDate>Sun, 14 May 2023 18:23:34 -0300</pubDate><author>fernandolcouto@gmail.com (Fernando L. Couto)</author>
-      <guid>http://localhost:1313/cv/cv/</guid>
+      <guid>https://flccodes.github.io/cv/cv/</guid>
       <description>Informações Pessoais Brasileiro, casado, residente na Região Oeste de Belo Horizonte/MG Email: fernandolcouto@gmail.com / Telefone: (31) 9.8484-1811 Objetivo / Interesse Profissional em Gestão Financeira e Controladoria que atua na interseção entre a experiência de negócios e ferramentas tecnológicas. Utilizo minha vivência prática para resolver problemas corporativos complexos, validando, editando e aprimorando a qualidade dos dados. Meu foco é garantir a aplicabilidade real, o contexto humano e a segurança na tomada de decisão em equipes multidisciplinares (Financeiro, TI, Jurídico e Comercial).</description>
     </item>
     <item>
       <title>About</title>
-      <link>http://localhost:1313/about/</link>
+      <link>https://flccodes.github.io/about/</link>
       <pubDate>Sun, 14 May 2023 17:59:51 -0300</pubDate><author>fernandolcouto@gmail.com (Fernando L. Couto)</author>
-      <guid>http://localhost:1313/about/</guid>
+      <guid>https://flccodes.github.io/about/</guid>
       <description>&amp;ldquo;O ser humano é do tamanho do conhecimento que possui&amp;rdquo;, ou, como muitas pessoas afirmam, &amp;ldquo;aquilo que o homem ignora torna sua percepção do universo menor&amp;rdquo;. Desconheço o(s) autor(es) e não, com certeza, não pretendo usar este espaço para [apenas] fazer anotações de frases. Embora, exista uma atribuída ao matemático e filósofo inglês Bertrand Rusell que julgo apropriada para introduzir alguns pensamentos: &amp;ldquo;O que as pessoas querem não é o conhecimento, mas a certeza&amp;rdquo;.</description>
     </item>
   </channel>

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+ 
+
+
+      <title>Migração do Controle de Consumo de Água (CCA) - </title>
+
+  <meta name="description" content="Documentação detalhada da reestruturação da aplicação de controle de consumo de água, mudanças nas fórmulas e discussões sobre melhores práticas em Go.">
+  <meta name="author" content="Fernando L. Couto"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Fernando L. Couto",
+    
+    "url": "https:\/\/flccodes.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/flccodes.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/flccodes.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/flccodes.github.io\/golang\/migracao_controle_consumo_de_agua\/",
+          "name": "Migração do controle de consumo de água ( cca)"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Fernando L. Couto"
+  },
+  "headline": "Migração do Controle de Consumo de Água (CCA)",
+  "description" : "Documentação detalhada da reestruturação da aplicação de controle de consumo de água, mudanças nas fórmulas e discussões sobre melhores práticas em Go.",
+  "inLanguage" : "en",
+  "wordCount":  892 ,
+  "datePublished" : "2026-06-14T15:52:00",
+  "dateModified" : "2026-06-14T15:52:00",
+  "image" : "https:\/\/flccodes.github.io\/img\/avatar-icon.jpg",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "https:\/\/flccodes.github.io\/golang\/migracao_controle_consumo_de_agua\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/flccodes.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/flccodes.github.io\/img\/avatar-icon.jpg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Migração do Controle de Consumo de Água (CCA)" />
+<meta property="og:description" content="Documentação detalhada da reestruturação da aplicação de controle de consumo de água, mudanças nas fórmulas e discussões sobre melhores práticas em Go.">
+<meta property="og:image" content="https://flccodes.github.io/img/avatar-icon.jpg" />
+<meta property="og:url" content="https://flccodes.github.io/golang/migracao_controle_consumo_de_agua/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Fernando L. Couto" />
+
+  <meta name="twitter:title" content="Migração do Controle de Consumo de Água (CCA)" />
+  <meta name="twitter:description" content="Documentação detalhada da reestruturação da aplicação de controle de consumo de água, mudanças nas fórmulas e discussões sobre melhores práticas em Go.">
+  <meta name="twitter:image" content="https://flccodes.github.io/img/avatar-icon.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link href='https://flccodes.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.131.0">
+  <link rel="alternate" href="https://flccodes.github.io/index.xml" type="application/rss+xml" title="Fernando L. Couto"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://flccodes.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://flccodes.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://flccodes.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+  
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://flccodes.github.io/">Fernando L. Couto</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Posts" href="/posts/">Posts</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Curso (TDS)" href="/curso/">Curso (TDS)</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Golang" href="/golang/">Golang</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Estudos Bíblicos" href="/estudos-biblicos/">Estudos Bíblicos</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Math" href="/math/">Math</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Git" href="/git/">Git</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Thoughs</a>
+              <div class="navlinks-children">
+                
+                  <a href="/post/2017-03-07-bigimg-sample">Big Image Sample</a>
+                
+                  <a href="/post/2017-03-05-math-sample">Math Sample</a>
+                
+                  <a href="/post/2016-03-08-code-sample">Code Sample</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags/">Tags</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="CV" href="/cv/">CV</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Fernando L. Couto" href="https://flccodes.github.io/">
+            <img class="avatar-img" src="https://flccodes.github.io/img/avatar-icon.jpg" alt="Fernando L. Couto" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="golang-heading">
+              
+                <h2>Migração do Controle de Consumo de Água (CCA)</h2>
+              
+              
+                <hr class="small">
+              
+              
+                
+                  <h3 class="golang-subheading">De COPASA Monitor para CCA: Relato de migração e discussões arquiteturais em Go</h3>
+                
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <h1 id="diário-de-aprendizado-go-migração-do-controle-de-consumo-de-água-cca">Diário de Aprendizado Go: Migração do Controle de Consumo de Água (CCA)</h1>
+<p>Este documento registra a evolução e os bastidores técnicos da migração do sistema <strong>COPASA Monitor</strong> para a sua nova etapa evolutiva: <strong>CCA (Controle de Consumo de Água)</strong>. Aqui detalhamos a arquitetura do projeto em Go, as discussões sobre persistência e infraestrutura doméstica gratuita, e o refatoramento matemático das fórmulas.</p>
+<hr>
+<h2 id="-retrato-1-como-nasceu-a-ideia-copasa-monitor">📸 Retrato 1: Como Nasceu a Ideia (COPASA Monitor)</h2>
+<p>O projeto original nasceu com o objetivo prático de automatizar a coleta de dados de consumo de água residencial. O fluxo básico consistia em:</p>
+<ol>
+<li>Tirar uma foto do hidrômetro pelo celular.</li>
+<li>Fazer o envio para uma aplicação Go.</li>
+<li>Usar a API do Gemini (<code>gemini-1.5-flash</code>) para extrair os dígitos numéricos (OCR).</li>
+<li>Calcular o consumo médio diário projetado, variação e estimativa de 30 dias.</li>
+<li>Sincronizar com uma planilha Google Sheets (aba <code>atual</code>) e manter um arquivo CSV local (<code>COPASA.csv</code>).</li>
+</ol>
+<h3 id="os-limites-do-primeiro-modelo">Os Limites do Primeiro Modelo</h3>
+<ul>
+<li><strong>Branding restrito:</strong> A marca &ldquo;COPASA&rdquo; associava o software a uma empresa distribuidora específica (Minas Gerais, Brasil).</li>
+<li><strong>CSV Não-Padrão:</strong> O arquivo local continha metadados customizados na primeira linha (<code>Tipo Leitura,DIÁRIA,,,,,,,@,</code>), impedindo que programas de análise padrão (como Pandas em Python ou PowerBI) abrissem o arquivo sem tratamento prévio de strings.</li>
+<li><strong>Complexidade no Código:</strong> Lógica de cálculo, interface web, OCR e banco de dados estavam misturados no pacote central <code>main</code>, reduzindo a testabilidade do projeto.</li>
+</ul>
+<hr>
+<h2 id="-retrato-2-a-evolução-para-o-cca">📈 Retrato 2: A Evolução para o CCA</h2>
+<p>Na segunda fase de testes, o projeto foi refatorado e migrado para o workspace <code>cca</code> (<code>github.com/flccodes/cca</code>), recebendo as seguintes evoluções de engenharia:</p>
+<h3 id="1-novo-branding-e-layout-limpo">1. Novo Branding e Layout Limpo</h3>
+<ul>
+<li>Nome alterado para <strong>CCA (Controle de Consumo de Água)</strong>, tornando-o neutro e utilizável em qualquer estado ou país.</li>
+<li>O arquivo CSV local passou a se chamar <code>sources/CCA - Controle de Consumo de Água - leitura_diaria.csv</code>.</li>
+<li>Cabeçalhos padronizados iniciando na <strong>Linha 1</strong> (padrão RFC 4180).</li>
+<li>Introdução de uma linha de base limpa (baseline) na <strong>Linha 2</strong> (<code>.... Initial...</code>), com os dados efetivos começando na <strong>Linha 3</strong>.</li>
+</ul>
+<h3 id="2-separação-de-conceitos-clean-architecture">2. Separação de Conceitos (Clean Architecture)</h3>
+<p>Dividiu-se a aplicação em sub-pacotes claros:</p>
+<ul>
+<li>Pacote <strong><code>parser</code></strong>: Lógica pura de leitura/escrita de CSV, conversões numéricas brasileiras e cálculos matemáticos. Não contém dependências de APIs web ou IA.</li>
+<li>Pacote <strong><code>cmd</code></strong>: Arquivos de configuração, cliente da API Gemini OCR, cliente da API do Google Sheets (mirando na aba <code>leitura_diaria</code>) e servidor web principal.</li>
+<li>Pacote <strong><code>web</code></strong>: Assets HTML, CSS e JavaScript puros embutidos em tempo de compilação por <code>go:embed</code>.</li>
+</ul>
+<h3 id="3-ajustes-de-fórmulas-e-robustez-matemática">3. Ajustes de Fórmulas e Robustez Matemática</h3>
+<p>As fórmulas foram refinadas para tratar anomalias, como leituras salvas no mesmo timestamp (duração zero) e evitar divisão por zero:</p>
+<ul>
+<li><strong>Variação (Coluna D):</strong>
+$$Variação = \begin{cases} 0, &amp; \text{se } \Delta t = 0 \text{ e } Horas_{anterior} = 0 \ Medidor_{atual} - Medidor_{anterior}, &amp; \text{caso contrário} \end{cases}$$</li>
+<li><strong>Horas Decorridas (Coluna J):</strong>
+$$Horas = \begin{cases} Horas_{anterior}, &amp; \text{se } \Delta t = 0 \ \Delta t \times 24, &amp; \text{caso contrário} \end{cases}$$</li>
+<li><strong>Estimado 1d (Coluna E):</strong>
+$$Estimado\ 1d = \begin{cases} 0, &amp; \text{se } Medidor = Variação \text{ e } Horas = 0 \ 0, &amp; \text{se } Horas = 0 \text{ (evita divisão por zero)} \ \frac{Variação}{Horas} \times 24, &amp; \text{caso contrário} \end{cases}$$</li>
+</ul>
+<hr>
+<h2 id="-discussão-filosófica-e-arquitetural-professor--aprendiz">🧠 Discussão Filosófica e Arquitetural (Professor &amp; Aprendiz)</h2>
+<h3 id="i-ponto-flutuante-vs-inteiros-em-bancos-de-dados">I. Ponto Flutuante vs. Inteiros em Bancos de Dados</h3>
+<p>Quando tratamos de volumes físicos (como $m^3$ de água com precisão de litros), o uso de ponto flutuante (<code>float64</code>) pode introduzir imprecisões decimais devido à representação binária dos computadores.</p>
+<ul>
+<li><strong>A Recomendação:</strong> Em sistemas profissionais, os valores devem ser tratados como <strong>inteiros</strong> na persistência (banco de dados), representando a menor unidade de medida possível (no caso do CCA, <strong>litros</strong>).</li>
+<li><strong>Exemplo:</strong> $445,34 \text{ m}^3$ é armazenado como o inteiro $445340$ litros. Ao carregar a tela, faz-se a divisão por 1000 apenas na exibição. Isso remove 100% dos erros acumulados de ponto flutuante em somatórios históricos.</li>
+</ul>
+<h3 id="ii-estratégias-de-captura-automatizada-de-data-e-hora">II. Estratégias de Captura Automatizada de Data e Hora</h3>
+<p>Para reduzir a fricção do usuário doméstico, foram mapeados três métodos de captura de tempo:</p>
+<ol>
+<li><strong>Timestamp Instantâneo:</strong> O JavaScript gera <code>new Date()</code> no momento do upload.</li>
+<li><strong>Componente Nativo:</strong> Uso do input HTML5 <code>&lt;input type=&quot;datetime-local&quot;&gt;</code>, gerando seletores otimizados pelo sistema operacional do smartphone.</li>
+<li><strong>Extração de Metadados EXIF:</strong> Análise do cabeçalho binário da imagem enviada para resgatar a data/hora real de captura da câmera do telefone, independentemente de quando o upload foi feito.</li>
+</ol>
+<h3 id="iii-infraestrutura-gratuita-para-aplicações-domésticas">III. Infraestrutura Gratuita para Aplicações Domésticas</h3>
+<p>Para quem deseja rodar o monitor sem custos recorrentes:</p>
+<ul>
+<li><strong>Hospedagem (Backend):</strong>
+<ul>
+<li><strong>Raspberry Pi ou Mini PC doméstico:</strong> Executar a aplicação Go localmente. Go consome pouca memória e CPU, permitindo rodar em hardware minimalista de baixo custo de energia elétrica.</li>
+<li><strong>Oracle Cloud (Always Free):</strong> Oferece servidores virtuais gratuitos para sempre com excelentes recursos para múltiplos sistemas caseiros.</li>
+</ul>
+</li>
+<li><strong>Persistência (Dados):</strong>
+<ul>
+<li><strong>SQLite:</strong> Banco de dados relacional de arquivo único local (zero configuração de servidor).</li>
+<li><strong>Supabase / Neon / ElephantSQL:</strong> Provedores de PostgreSQL na nuvem com planos gratuitos generosos.</li>
+<li><strong>Google Sheets:</strong> Como implementado no projeto, serve como banco de dados visual excelente com gráficos integrados nativos e sem custo.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="-cobertura-de-testes-unitários">🧪 Cobertura de Testes Unitários</h2>
+<p>Para garantir a estabilidade das fórmulas descritas, foram implementados testes unitários automatizados cobrindo os seguintes cenários:</p>
+<ul>
+<li>Conversão de moedas/floats brasileiros (<code>FormatFloat</code> e <code>ParseFloatBr</code>).</li>
+<li>Resiliência de data e hora (<code>ParseDateTime</code>).</li>
+<li>Mudança matemática com leituras simultâneas em <a href="file:///home/sl01/go/src/github.com/flccodes/cca/parser/calculator.go#L24-L64">CalculateNextReading</a>.</li>
+<li>Roteador de fallback local para gravação no arquivo CSV quando a rede ou credenciais do Google Sheets falham.</li>
+</ul>
+<p><em>O resultado prático se consolidou em uma aplicação limpa, confiável e modularizada.</em></p>
+
+
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2fflccodes.github.io%2fgolang%2fmigracao_controle_consumo_de_agua%2f&amp;text=Migra%c3%a7%c3%a3o%20do%20Controle%20de%20Consumo%20de%20%c3%81gua%20%28CCA%29&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fflccodes.github.io%2fgolang%2fmigracao_controle_consumo_de_agua%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2fflccodes.github.io%2fgolang%2fmigracao_controle_consumo_de_agua%2f&amp;title=Migra%c3%a7%c3%a3o%20do%20Controle%20de%20Consumo%20de%20%c3%81gua%20%28CCA%29" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fflccodes.github.io%2fgolang%2fmigracao_controle_consumo_de_agua%2f&amp;title=Migra%c3%a7%c3%a3o%20do%20Controle%20de%20Consumo%20de%20%c3%81gua%20%28CCA%29" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fflccodes.github.io%2fgolang%2fmigracao_controle_consumo_de_agua%2f&amp;title=Migra%c3%a7%c3%a3o%20do%20Controle%20de%20Consumo%20de%20%c3%81gua%20%28CCA%29" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fflccodes.github.io%2fgolang%2fmigracao_controle_consumo_de_agua%2f&amp;description=Migra%c3%a7%c3%a3o%20do%20Controle%20de%20Consumo%20de%20%c3%81gua%20%28CCA%29" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="https://www.flcoutos.com.br">Fernando L. Couto</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2026
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://flccodes.github.io/">Fernando L. Couto</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://flccodes.github.io/js/main.js"></script>
+<script src="https://flccodes.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://flccodes.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+
